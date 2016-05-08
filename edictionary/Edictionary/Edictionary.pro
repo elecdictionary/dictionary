@@ -15,10 +15,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     ediccontroler.cpp \
-    edicuser.cpp
+    edicuser.cpp \
+    myrand.cpp \
+    adjustwindow.cpp \
+    registerwindow.cpp
 
 HEADERS  += mainwindow.h \
     edicuser.h \
-    ediccontroler.h
+    ediccontroler.h \
+    myrand.h \
+    adjustwindow.h \
+    registerwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    adjustwindow.ui \
+    registerwindow.ui

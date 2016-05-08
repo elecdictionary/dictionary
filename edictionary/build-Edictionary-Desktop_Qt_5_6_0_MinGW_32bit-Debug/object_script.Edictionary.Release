@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\ediccontroler.o
+./release\edicuser.o
+./release\myrand.o
+./release\adjustwindow.o
+./release\registerwindow.o
+./release\moc_mainwindow.o
+./release\moc_adjustwindow.o
+./release\moc_registerwindow.o
+);

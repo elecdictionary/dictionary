@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>AdjustWindow</class>
+ <widget class="QMainWindow" name="AdjustWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -9,6 +9,12 @@
     <width>750</width>
     <height>400</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
@@ -25,27 +31,30 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="label">
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>110</y>
+      <x>660</x>
+      <y>300</y>
       <width>51</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>用户名：</string>
+     <string>返回</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>20</y>
-      <width>131</width>
-      <height>41</height>
+      <x>330</x>
+      <y>50</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -55,73 +64,70 @@
      </font>
     </property>
     <property name="text">
-     <string>XXX背单词软件</string>
+     <string>用户设置</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>难度：</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>280</x>
       <y>170</y>
-      <width>31</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>密码：</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>240</y>
-      <width>81</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>登录</string>
+     <string>每日背单词数目：</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>340</x>
       <y>240</y>
       <width>81</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>注册</string>
+     <string>应用</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QSpinBox" name="spinBox">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>110</y>
-      <width>151</width>
-      <height>21</height>
+      <x>400</x>
+      <y>180</y>
+      <width>42</width>
+      <height>22</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QSpinBox" name="spinBox_2">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>170</y>
-      <width>151</width>
-      <height>21</height>
+      <x>400</x>
+      <y>130</y>
+      <width>42</width>
+      <height>22</height>
      </rect>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
+  <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -131,17 +137,8 @@
     </rect>
    </property>
   </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>

@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\ediccontroler.o
+./debug\edicuser.o
+./debug\myrand.o
+./debug\adjustwindow.o
+./debug\registerwindow.o
+./debug\moc_mainwindow.o
+./debug\moc_adjustwindow.o
+./debug\moc_registerwindow.o
+);
