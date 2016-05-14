@@ -1,23 +1,20 @@
 #ifndef EDICCONTROLER_H
 #define EDICCONTROLER_H
 
-#include "edicuser.h"
 #include <string>
 #include <vector>
-
-struct wordnote{
-    std::string voca, pronun, cat, chinese;
-    int lev;
-};
+#include "edicuser.h"
+#include "myrand.h"
+#include "wordnote.h"
 
 class ediccontroler
 {
 private:
-    std::vector<wordnote> dictionary;
+    std::vector<Wordnote> dictionary;
 public:
-    edicuser user;//不含参数 不需在初始化列表里调用其构造函数
-    void GetTestPaper(std::vector<wordnote>& testpaper);//获取背单词考卷
-    void GetVocaList(std::string vocabulary, std::vector<wordnote>& vocalist);//查询单词词条
+    edicuser *User;//不含参数 不需在初始化列表里调用其构造函数
+    bool GetTestPaper(std::vector<Wordnote>& testpaper);//获取背单词考卷
+    int GetVocaList(std::string vocabulary, std::vector<Wordnote>& vocalist);//查询单词词条
     void Init();//初始化
     ediccontroler();
     ~ediccontroler();

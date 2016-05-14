@@ -35,7 +35,7 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="retButton">
     <property name="geometry">
      <rect>
       <x>660</x>
@@ -93,7 +93,7 @@
      <string>每日背单词数目：</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="applyButton">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -106,7 +106,7 @@
      <string>应用</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="stranumBox">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -115,8 +115,11 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="minimum">
+     <number>10</number>
+    </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox_2">
+   <widget class="QSpinBox" name="stralevBox">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -124,6 +127,12 @@
       <width>42</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>2</number>
     </property>
    </widget>
   </widget>

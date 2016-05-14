@@ -28,13 +28,13 @@ class Ui_AdjustWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
+    QPushButton *retButton;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
-    QPushButton *pushButton_2;
-    QSpinBox *spinBox;
-    QSpinBox *spinBox_2;
+    QPushButton *applyButton;
+    QSpinBox *stranumBox;
+    QSpinBox *stralevBox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -53,9 +53,9 @@ public:
         AdjustWindow->setLayoutDirection(Qt::LeftToRight);
         centralwidget = new QWidget(AdjustWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(660, 300, 51, 31));
+        retButton = new QPushButton(centralwidget);
+        retButton->setObjectName(QStringLiteral("retButton"));
+        retButton->setGeometry(QRect(660, 300, 51, 31));
         label = new QLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(330, 50, 91, 31));
@@ -69,15 +69,18 @@ public:
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(280, 170, 91, 31));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(340, 240, 81, 31));
-        spinBox = new QSpinBox(centralwidget);
-        spinBox->setObjectName(QStringLiteral("spinBox"));
-        spinBox->setGeometry(QRect(400, 180, 42, 22));
-        spinBox_2 = new QSpinBox(centralwidget);
-        spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
-        spinBox_2->setGeometry(QRect(400, 130, 42, 22));
+        applyButton = new QPushButton(centralwidget);
+        applyButton->setObjectName(QStringLiteral("applyButton"));
+        applyButton->setGeometry(QRect(340, 240, 81, 31));
+        stranumBox = new QSpinBox(centralwidget);
+        stranumBox->setObjectName(QStringLiteral("stranumBox"));
+        stranumBox->setGeometry(QRect(400, 180, 42, 22));
+        stranumBox->setMinimum(10);
+        stralevBox = new QSpinBox(centralwidget);
+        stralevBox->setObjectName(QStringLiteral("stralevBox"));
+        stralevBox->setGeometry(QRect(400, 130, 42, 22));
+        stralevBox->setMinimum(1);
+        stralevBox->setMaximum(2);
         AdjustWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(AdjustWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -95,11 +98,11 @@ public:
     void retranslateUi(QMainWindow *AdjustWindow)
     {
         AdjustWindow->setWindowTitle(QApplication::translate("AdjustWindow", "MainWindow", 0));
-        pushButton->setText(QApplication::translate("AdjustWindow", "\350\277\224\345\233\236", 0));
+        retButton->setText(QApplication::translate("AdjustWindow", "\350\277\224\345\233\236", 0));
         label->setText(QApplication::translate("AdjustWindow", "\347\224\250\346\210\267\350\256\276\347\275\256", 0));
         label_2->setText(QApplication::translate("AdjustWindow", "\351\232\276\345\272\246\357\274\232", 0));
         label_3->setText(QApplication::translate("AdjustWindow", "\346\257\217\346\227\245\350\203\214\345\215\225\350\257\215\346\225\260\347\233\256\357\274\232", 0));
-        pushButton_2->setText(QApplication::translate("AdjustWindow", "\345\272\224\347\224\250", 0));
+        applyButton->setText(QApplication::translate("AdjustWindow", "\345\272\224\347\224\250", 0));
     } // retranslateUi
 
 };

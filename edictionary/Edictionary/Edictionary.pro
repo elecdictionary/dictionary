@@ -18,15 +18,20 @@ SOURCES += main.cpp\
     edicuser.cpp \
     myrand.cpp \
     adjustwindow.cpp \
-    registerwindow.cpp
+    registerwindow.cpp \
+    wordnote.cpp \
+    menuwindow.cpp
 
 HEADERS  += mainwindow.h \
     edicuser.h \
     ediccontroler.h \
     myrand.h \
     adjustwindow.h \
-    registerwindow.h
+    registerwindow.h \
+    wordnote.h \
+    menuwindow.h
 
 FORMS    += mainwindow.ui \
     adjustwindow.ui \
-    registerwindow.ui
+    registerwindow.ui \
+    menuwindow.ui

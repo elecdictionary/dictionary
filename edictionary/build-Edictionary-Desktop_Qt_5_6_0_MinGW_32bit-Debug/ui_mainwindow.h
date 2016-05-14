@@ -32,10 +32,10 @@ public:
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QPushButton *loginButton;
+    QPushButton *registerButton;
+    QLineEdit *userName;
+    QLineEdit *password;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -62,19 +62,19 @@ public:
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(240, 170, 31, 21));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(260, 240, 81, 31));
-        pushButton_2 = new QPushButton(centralWidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(420, 240, 81, 31));
-        lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(300, 110, 151, 21));
-        lineEdit_2 = new QLineEdit(centralWidget);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(300, 170, 151, 21));
-        lineEdit_2->setEchoMode(QLineEdit::Password);
+        loginButton = new QPushButton(centralWidget);
+        loginButton->setObjectName(QStringLiteral("loginButton"));
+        loginButton->setGeometry(QRect(260, 240, 81, 31));
+        registerButton = new QPushButton(centralWidget);
+        registerButton->setObjectName(QStringLiteral("registerButton"));
+        registerButton->setGeometry(QRect(420, 240, 81, 31));
+        userName = new QLineEdit(centralWidget);
+        userName->setObjectName(QStringLiteral("userName"));
+        userName->setGeometry(QRect(300, 110, 151, 21));
+        password = new QLineEdit(centralWidget);
+        password->setObjectName(QStringLiteral("password"));
+        password->setGeometry(QRect(300, 170, 151, 21));
+        password->setEchoMode(QLineEdit::Password);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -98,8 +98,8 @@ public:
         label->setText(QApplication::translate("MainWindow", "\347\224\250\346\210\267\345\220\215\357\274\232", 0));
         label_2->setText(QApplication::translate("MainWindow", "XXX\350\203\214\345\215\225\350\257\215\350\275\257\344\273\266", 0));
         label_3->setText(QApplication::translate("MainWindow", "\345\257\206\347\240\201\357\274\232", 0));
-        pushButton->setText(QApplication::translate("MainWindow", "\347\231\273\345\275\225", 0));
-        pushButton_2->setText(QApplication::translate("MainWindow", "\346\263\250\345\206\214", 0));
+        loginButton->setText(QApplication::translate("MainWindow", "\347\231\273\345\275\225", 0));
+        registerButton->setText(QApplication::translate("MainWindow", "\346\263\250\345\206\214", 0));
     } // retranslateUi
 
 };

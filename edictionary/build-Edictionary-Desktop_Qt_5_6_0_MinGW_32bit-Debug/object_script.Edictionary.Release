@@ -6,7 +6,10 @@ INPUT(
 ./release\myrand.o
 ./release\adjustwindow.o
 ./release\registerwindow.o
+./release\wordnote.o
+./release\menuwindow.o
 ./release\moc_mainwindow.o
 ./release\moc_adjustwindow.o
 ./release\moc_registerwindow.o
+./release\moc_menuwindow.o
 );
