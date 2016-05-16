@@ -27,7 +27,7 @@ int usermodify :: ShowNum()
     return num;
 }
 
-char* usermodify :: ShowCode()
+std::string usermodify :: ShowCode()
 {
     char *filename;
     filename = Path("users", username, "standard.info");
@@ -37,7 +37,8 @@ char* usermodify :: ShowCode()
     file.getline(code, codelen);
     char *codenow;
     strcpy(codenow, code);
-    return codenow;
+    std::string scode(codenow);
+    return scode;
 }
 
 void usermodify :: ChangeCode(std::string scode)

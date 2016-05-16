@@ -10,7 +10,7 @@ public:
     void ChangeCode(std::string scode);
     int ShowLevel();
     int ShowNum();
-    char* ShowCode();
+    std::string ShowCode();
     void SetLevel(int level);
     void SetNum(int num);
     void Save();
