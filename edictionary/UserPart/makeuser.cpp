@@ -1,25 +1,6 @@
 #include "makeuser.h"
 
-makeuser :: makeuser(): namelen(80), userlev(0), usernum(0) {}
-
-char* makeuser :: Convert(std::string str)
-{
-    char *ch;
-    const int len = str.length();
-    ch = new char[len+1];
-    strcpy(ch, str.c_str());
-    return ch;
-}
-
-char* makeuser :: UserPath(char* name, const char* file)
-{
-    char *pt;
-    strcpy(pt, ".\\users\\");
-    strcat(pt, name);
-    strcat(pt, "\\");
-    strcat(pt, file);
-    return pt;
-}
+makeuser :: makeuser(): namelen(80), codelen(80), userlev(0), usernum(0) {}
 
 bool makeuser :: CheckName(std::string sname)
 {
@@ -53,7 +34,7 @@ void makeuser :: GetUser(std::string sname, std::string scode)
     code = Convert(scode);
 
     char *filename;
-    filename = UserPath(name, "standard.info");
+    filename = Path("users", name, "standard.info");
     std::ofstream fout;
     char *fn = filename, *tag;
     for(tag = fn; *tag; tag++)
@@ -75,12 +56,12 @@ void makeuser :: GetUser(std::string sname, std::string scode)
     fout << code << std::endl;
     fout.close();
 
-    filename = UserPath(name, "level.info");
+    filename = Path("users", name, "level.info");
     fout.open(filename);
     fout << userlev << std::endl;
     fout.close();
 
-    filename = UserPath(name, "number.info");
+    filename = Path("users", name, "number.info");
     fout.open(filename);
     fout << usernum << std::endl;
     fout.close();
