@@ -11,6 +11,8 @@ bool makeuser :: CheckName(std::string sname)
     char username[namelen];
     std::fstream alluser;
     alluser.open(".\\users\\alluser.info");
+    if (!alluser)
+        return true;
     while(!alluser.eof())
     {
         alluser.getline(username, namelen);

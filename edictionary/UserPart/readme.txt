@@ -13,6 +13,16 @@ usermodify.SetLevel(int level)----获取新等级
 usermodify.SetNum(int num)----获取新单词数量
 usermodify.Save()----将更改写入用户信息
 
+vocabulary.GetWords(vector<wordnote> &allwords)----将词库传到一个vector上
+vocabulary.Sentence(std::vector<std::string> &allst, std::string word)----将一个单词的例句传到一个vector上
+
+userlearn(std::string name)----获取当前用户
+userlearn.Record(std::string word)----将一个单词记为已经记住的
+userlearn.Learn(std::string word)----对一个单词进行记忆操作
+bool userlearn.CheckWord(std::string word)----判断一个单词是否是已经记住的
+userlearn.AddSentence(std::string word, std::string sentence)----为一个单词添加例句
+userlearn.Sentence(std::vector<std::string> &allst, std::string word)----将一个单词的例句传到一个vector上
+int userlearn.WordRemembered()----用户已经记住的单词数
 
 ------------------------------------------------------------------------------------------------------------------------
-当前情况：user部分接口写好了，vocabulary部分的接口正在写。还是不明白如何将词库返回到一个vector里面。
+当前情况：例句需要中文解释吗？
