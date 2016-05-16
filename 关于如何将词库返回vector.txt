@@ -1,0 +1,23 @@
+我需要一个接口，参数是一个vector引用 例如void GetDictionary(vector<wordnote> &dictionary)
+在接口中需要一个一个把词条push_back（）到vector中去，为此你需要#include "wordnote.h"
+每个词条包含5部分：
+class Wordnote
+{
+private:
+    std::string voca, pronun, cat, chinese;
+    int lev;
+public:
+    Wordnote();
+    int getLev() const;
+    void setLev(int value);
+    std::string getVoca() const;
+    void setVoca(const std::string &value);
+    std::string getPronun() const;
+    void setPronun(const std::string &value);
+    std::string getCat() const;
+    void setCat(const std::string &value);
+    std::string getChinese() const;
+    void setChinese(const std::string &value);
+};
+分别表示英文单词,音标，词性、中文和难度级别（1简单2难）
+set接口表示修改该类，get接口表示获得该类。
