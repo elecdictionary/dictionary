@@ -2,6 +2,11 @@
 
 makeuser :: makeuser(): namelen(80), codelen(80), userlev(0), usernum(0), capacity(14330) {}
 
+makeuser::~makeuser()
+{
+
+}
+
 bool makeuser :: CheckName(std::string sname)
 {
 

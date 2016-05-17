@@ -19,3 +19,13 @@ char* database :: Path(const char* folder, char* name, const char* file)
     strcat(pt, file);
     return pt;
 }
+
+database::database()
+{
+
+}
+
+database::~database()
+{
+
+}

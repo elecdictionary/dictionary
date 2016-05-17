@@ -5,6 +5,11 @@ usermodify :: usermodify(std::string sname)
     username = Convert(sname);
 }
 
+usermodify::~usermodify()
+{
+
+}
+
 int usermodify :: ShowLevel()
 {
     char* filename;

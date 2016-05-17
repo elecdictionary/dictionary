@@ -77,6 +77,11 @@ void vocabulary :: Sentence(std::vector<std::string> &allst, std::string word)
     }
 }
 
+vocabulary::~vocabulary()
+{
+
+}
+
 
 
 
