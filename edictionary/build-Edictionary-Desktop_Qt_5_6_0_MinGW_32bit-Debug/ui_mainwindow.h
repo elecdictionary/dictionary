@@ -44,9 +44,9 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(750, 400);
-        MainWindow->setMinimumSize(QSize(750, 400));
-        MainWindow->setMaximumSize(QSize(750, 400));
+        MainWindow->resize(750, 399);
+        MainWindow->setMinimumSize(QSize(750, 399));
+        MainWindow->setMaximumSize(QSize(750, 399));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);

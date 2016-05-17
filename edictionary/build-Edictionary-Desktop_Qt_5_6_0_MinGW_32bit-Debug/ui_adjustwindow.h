@@ -42,14 +42,14 @@ public:
     {
         if (AdjustWindow->objectName().isEmpty())
             AdjustWindow->setObjectName(QStringLiteral("AdjustWindow"));
-        AdjustWindow->resize(750, 400);
+        AdjustWindow->resize(750, 399);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(AdjustWindow->sizePolicy().hasHeightForWidth());
         AdjustWindow->setSizePolicy(sizePolicy);
-        AdjustWindow->setMinimumSize(QSize(750, 400));
-        AdjustWindow->setMaximumSize(QSize(750, 400));
+        AdjustWindow->setMinimumSize(QSize(750, 399));
+        AdjustWindow->setMaximumSize(QSize(750, 399));
         AdjustWindow->setLayoutDirection(Qt::LeftToRight);
         centralwidget = new QWidget(AdjustWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));

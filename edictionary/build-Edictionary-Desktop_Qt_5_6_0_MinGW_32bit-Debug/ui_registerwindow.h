@@ -48,9 +48,9 @@ public:
     {
         if (RegisterWindow->objectName().isEmpty())
             RegisterWindow->setObjectName(QStringLiteral("RegisterWindow"));
-        RegisterWindow->resize(750, 400);
-        RegisterWindow->setMinimumSize(QSize(750, 400));
-        RegisterWindow->setMaximumSize(QSize(750, 400));
+        RegisterWindow->resize(750, 399);
+        RegisterWindow->setMinimumSize(QSize(750, 399));
+        RegisterWindow->setMaximumSize(QSize(750, 399));
         centralwidget = new QWidget(RegisterWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         label_2 = new QLabel(centralwidget);

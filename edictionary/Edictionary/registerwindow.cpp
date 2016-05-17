@@ -38,6 +38,12 @@ void RegisterWindow::on_password_editingFinished()
     else{
         ui->checkBox_2->setChecked(0);
     }
+    if(ui->checkBox_2->checkState() && ui->password->text() == ui->password_2->text()){
+        ui->checkBox_3->setChecked(1);
+    }
+    else{
+        ui->checkBox_3->setChecked(0);
+    }
 }
 
 void RegisterWindow::on_password_2_editingFinished()
