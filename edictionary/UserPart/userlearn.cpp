@@ -1,6 +1,6 @@
 #include "userlearn.h"
 
-userlearn :: userlearn(std::string sname): capacity(14330)
+userlearn :: userlearn(std::string sname)//: capacity(14330)
 {
     username = sname;
 
@@ -29,7 +29,8 @@ userlearn :: userlearn(std::string sname): capacity(14330)
 
 void userlearn :: Learn(std::string sword)
 {
-    char *filename;
+    char *filename, *name;
+    name = Convert(username);
     strcpy(filename, "record\\");
     strcat(filename, name);
     strcat(filename, "\\");
@@ -80,7 +81,7 @@ void userlearn :: AddSentence(std::string sword, std::string stc)
 void userlearn :: Sentence(std::vector<std::string> &allst, std::string sword)
 {
     char *filename, *name, *word;
-    word = Conver(sword);
+    word = Convert(sword);
     name = Convert(username);
     strcat(word, ".txt");
     filename = Path("record", name, word);
@@ -91,22 +92,22 @@ void userlearn :: Sentence(std::vector<std::string> &allst, std::string sword)
     while (!st.eof())
     {
         std::getline(st, stc);
-        stc[stc.length-1] = '\0';
+        stc[stc.length()-1] = '\0';
         allst.push_back(stc);
         stc.clear();
     }
 }
 
 int userlearn :: WordRemembered()
-{
+{/*
     int sum;
     for (int i = 0; i < capacity; i++)
         if (learningset[i] == 3)
             sum++;
-    return sum;
+    return sum;*/
 }
 
-~userlearn :: userlearn()
+userlearn :: ~userlearn()
 {
     delete date;
     date = NULL;

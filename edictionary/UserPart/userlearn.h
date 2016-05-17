@@ -6,9 +6,8 @@
 
 class userlearn : public database{
 private:
-    const int capacity;
     std::string username;
-    int learningset[capacity];
+    int learningset[14330];
     char *date;
     //char* Path(const char* folder, char* name, const char* file);
 public:

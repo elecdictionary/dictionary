@@ -5,7 +5,7 @@ void vocabulary :: GetWords(std::vector<wordnote> &allwords)
     std::string line;
     std::ifstream fin("words.txt");
     std::string voca, pronun, cat, chinese;
-    char *commend;
+    char *commend, *cword;
     wordnote *word;
     while (getline(fin, line))
     {
@@ -16,10 +16,12 @@ void vocabulary :: GetWords(std::vector<wordnote> &allwords)
             {
                 voca.append(line, 0, pos);
 
+                cword = Convert(voca);
                 strcpy(commend, "mkdir words\\");
-                strcat(commend, word);
+                strcat(commend, cword);
                 system(commend);
                 delete commend;
+                delete cword;
 
                 word->setVoca(voca);
                 voca.clear();
@@ -59,8 +61,9 @@ void vocabulary :: GetWords(std::vector<wordnote> &allwords)
 
 void vocabulary :: Sentence(std::vector<std::string> &allst, std::string word)
 {
-    char* filename;
-    filename = Path("words", word, "sentence.txt");
+    char *filename, *cword;
+    cword = Convert(word);
+    filename = Path("words", cword, "sentence.txt");
     std::ifstream st(filename);
     if (!st)
         return;
@@ -68,7 +71,7 @@ void vocabulary :: Sentence(std::vector<std::string> &allst, std::string word)
     while (!st.eof())
     {
         std::getline(st, stc);
-        stc[stc.length-1] = '\0';
+        stc[stc.length()-1] = '\0';
         allst.push_back(stc);
         stc.clear();
     }

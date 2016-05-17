@@ -13,3 +13,5 @@ public:
     vocabulary();
     ~vocabulary();
 };
+
+#endif //VOCABULARY_H
