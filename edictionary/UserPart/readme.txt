@@ -4,7 +4,7 @@ char* database.Path(const char* folder, char* name, const char* file)----·µ»ØÒ»¸
 makeuser.GetUser(string sname, string scode)-----½¨Á¢ÓÃ»§
 bool makeuser.CheckName(string sname)----ÅĞÖØ
 
-usermodify(string name)----»ñÈ¡Òª¸ü¸ÄµÄÓÃ»§Ãû
+usermodify(string sname)----»ñÈ¡Òª¸ü¸ÄµÄÓÃ»§Ãû
 int usermodify.ShowLevel()----µ±Ç°µÈ¼¶
 int usermodify.ShowNum()----µ±Ç°µ¥´ÊÊıÁ¿
 char* usermodify.ShowCode()----µ±Ç°ÃÜÂë
@@ -20,9 +20,9 @@ userlearn(std::string name)----»ñÈ¡µ±Ç°ÓÃ»§
 userlearn.Record(std::string word)----½«Ò»¸öµ¥´Ê¼ÇÎªÒÑ¾­¼Ç×¡µÄ
 userlearn.Learn(std::string word)----¶ÔÒ»¸öµ¥´Ê½øĞĞ¼ÇÒä²Ù×÷
 bool userlearn.CheckWord(std::string word)----ÅĞ¶ÏÒ»¸öµ¥´ÊÊÇ·ñÊÇÒÑ¾­¼Ç×¡µÄ
-userlearn.AddSentence(std::string word, std::string sentence)----ÎªÒ»¸öµ¥´ÊÌí¼ÓÀı¾ä
-userlearn.Sentence(std::vector<std::string> &allst, std::string word)----½«Ò»¸öµ¥´ÊµÄÀı¾ä´«µ½Ò»¸övectorÉÏ
+userlearn.AddSentence(std::string sword, std::string stc)----ÎªÒ»¸öµ¥´ÊÌí¼ÓÀı¾ä
+userlearn.Sentence(std::vector<std::string> &allst, std::string sword)----½«Ò»¸öµ¥´ÊµÄÀı¾ä´«µ½Ò»¸övectorÉÏ
 int userlearn.WordRemembered()----ÓÃ»§ÒÑ¾­¼Ç×¡µÄµ¥´ÊÊı
 
 ------------------------------------------------------------------------------------------------------------------------
-µ±Ç°Çé¿ö£ºÀı¾äĞèÒªÖĞÎÄ½âÊÍÂğ£¿
+µ±Ç°Çé¿ö£º¶ÔÓÚÒ»¸öµ¥´Ê£¬ĞèÒªRecordÖ®ºó²ÅÄÜCheckµ½ÊÇÒÑ¾­¼Ç×¡µÄ¡£ÎÄ¼ş¼ĞÊÇÓÃsystemÃüÁî½¨Á¢µÄ£¬windowsÓ¦¸ÃÅÜµÃ¹ıÁË¡£

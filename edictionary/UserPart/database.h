@@ -2,7 +2,7 @@
 #define DATABASE_H
 
 #include <vector>
-#include <io.h>
+#include <cstdlib>
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -11,7 +11,7 @@
 class database{
 public:
     char* Convert(std::string str);
-    char* Path(const char* folder, char* name, const char* Path);
+    char* Path(const char* folder, char* name, const char* file);
     database();
     ~database();
 };
