@@ -10,11 +10,12 @@
 class ediccontroler
 {
 private:
-    std::vector<Wordnote> dictionary;
+    std::vector<wordnote> dictionary;
 public:
     edicuser *User;//不含参数 不需在初始化列表里调用其构造函数
-    bool GetTestPaper(std::vector<Wordnote>& testpaper);//获取背单词考卷
-    int GetVocaList(std::string vocabulary, std::vector<Wordnote>& vocalist);//查询单词词条
+    bool GetTestPaper(std::vector<wordnote>& testpaper);//获取背单词考卷
+    int GetVocaList(std::string vocabulary, std::vector<wordnote>& vocalist);//查询单词词条
+    void GetSentences(std::string vocabulary, std::vector<std::string> &sentences);
     void Init();//初始化
     ediccontroler();
     ~ediccontroler();

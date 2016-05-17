@@ -7,7 +7,7 @@ bool makeuser.CheckName(string sname)----判重
 usermodify(string sname)----获取要更改的用户名
 int usermodify.ShowLevel()----当前等级
 int usermodify.ShowNum()----当前单词数量
-char* usermodify.ShowCode()----当前密码
+string usermodify.ShowCode()----当前密码
 usermodify.ChangeCode(string scode)----获取新密码
 usermodify.SetLevel(int level)----获取新等级
 usermodify.SetNum(int num)----获取新单词数量

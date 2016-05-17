@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="settingButton">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>100</y>
+      <x>170</x>
+      <y>140</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -63,6 +63,94 @@
     </property>
     <property name="text">
      <string>登出</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="adjpasswordButton">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>210</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>修改密码</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchwordButton">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>120</y>
+      <width>750</width>
+      <height>399</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>399</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>750</width>
+      <height>399</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>查单词</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reciteButton">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>180</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>背单词</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="textsearchButton">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>240</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>文本生词检索</string>
     </property>
    </widget>
   </widget>

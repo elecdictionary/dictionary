@@ -13,8 +13,10 @@ int edicuser::getStranum() const
 
 void edicuser::setStranum(int value)
 {
+    if(!status) return ;
     stranum = value;
-    //...在文件中修改策略
+    userModify->SetNum(value);
+    userModify->Save();
 }
 
 int edicuser::getStralev() const
@@ -24,8 +26,10 @@ int edicuser::getStralev() const
 
 void edicuser::setStralev(int value)
 {
+    if(!status) return ;
     stralev = value;
-    //在文件中修改难度
+    userModify->SetLevel(value);
+    userModify->Save();
 }
 
 std::string edicuser::getUsername() const
@@ -41,9 +45,13 @@ int edicuser::getStatus() const
 bool edicuser::Login(std::string name, std::string password)
 {
     bool flag = 0;
-    
-    //...判断该用户名和密码是否正确
-    
+    userModify = new usermodify(name);
+    if(password == userModify->ShowCode())
+        flag = 1;
+    else
+        flag = 0;
+    delete userModify;
+    userModify = NULL;
     if(flag){
         username = name;
         Init();
@@ -53,7 +61,8 @@ bool edicuser::Login(std::string name, std::string password)
 
 bool edicuser::UserRegister(std::string name, std::string password)
 {
-    //...创建用户个人信息文件夹
+    makeUser->GetUser(name, password);
+    //.可能还需创建其他文件
     return 1;
 }
 
@@ -68,13 +77,16 @@ bool edicuser::Logout()
 
 bool edicuser::CheckUserName(std::string name)
 {
-    return 1;//1表示通过
+    return makeUser->CheckName(name);//1表示通过
 }
 
 void edicuser::Init()
 {
     status = 1;
-    //...读取级别和策略以及已背单词数
+    userModify = new usermodify(username);
+    stralev = userModify->ShowLevel();
+    stranum = userModify->ShowNum();
+    //...读取已背单词数
 }
 
 bool edicuser::AdjSettings(int num, int lev)
@@ -89,6 +101,7 @@ bool edicuser::AdjSettings(int num, int lev)
 edicuser::edicuser()
 {
     status = 0;//表示未登录
+    makeUser = new makeuser();
 }
 
 edicuser::~edicuser()

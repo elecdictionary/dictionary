@@ -3,13 +3,14 @@
 
 #include <string>
 
-class Wordnote
+class wordnote
 {
 private:
     std::string voca, pronun, cat, chinese;
     int lev;
 public:
-    Wordnote();
+    wordnote();
+    ~wordnote();
     int getLev() const;
     void setLev(int value);
     std::string getVoca() const;

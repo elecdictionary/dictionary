@@ -8,8 +8,15 @@ INPUT(
 ./release\registerwindow.o
 ./release\wordnote.o
 ./release\menuwindow.o
+./release\makeuser.o
+./release\usermodify.o
+./release\database.o
+./release\searchwordwindow.o
+./release\userlearn.o
+./release\vocabulary.o
 ./release\moc_mainwindow.o
 ./release\moc_adjustwindow.o
 ./release\moc_registerwindow.o
 ./release\moc_menuwindow.o
+./release\moc_searchwordwindow.o
 );

@@ -1,10 +1,10 @@
 #include "ediccontroler.h"
 
-bool ediccontroler::GetTestPaper(std::vector<Wordnote> &testpaper)
+bool ediccontroler::GetTestPaper(std::vector<wordnote> &testpaper)
 {
     if(User->getStatus() == 0)
         return 0;
-    Wordnote ret;
+    wordnote ret;
     int num = User->getStranum(), num1, num2;
     int dsize = dictionary.size();
     int paper[300];
@@ -29,11 +29,11 @@ bool ediccontroler::GetTestPaper(std::vector<Wordnote> &testpaper)
     return 1;
 }
 
-int ediccontroler::GetVocaList(std::string vocabulary, std::vector<Wordnote>& vocalist)
+int ediccontroler::GetVocaList(std::string vocabulary, std::vector<wordnote>& vocalist)
 {
     if(User->getStatus() == 0)
         return 0;//
-    std::vector<Wordnote>::iterator it;
+    std::vector<wordnote>::iterator it;
     for(it = dictionary.begin(); it != dictionary.end(); it ++)
     {
         if(vocabulary == (*it).getVoca()){
@@ -42,6 +42,11 @@ int ediccontroler::GetVocaList(std::string vocabulary, std::vector<Wordnote>& vo
         }
     }
     return 2;//表示不存在该单词，未处理文件丢失等情况
+}
+
+void ediccontroler::GetSentences(std::string vocabulary, std::vector<std::string> &sentences)
+{
+    //...将用户自定义例句放入sentences中
 }
 
 void ediccontroler::Init()

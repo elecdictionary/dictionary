@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "ediccontroler.h"
+#include "adjustwindow.h"
 
 namespace Ui {
 class MenuWindow;
@@ -16,6 +17,9 @@ class MenuWindow : public QMainWindow
 public:
     explicit MenuWindow(ediccontroler *Edic, QWidget *parent = 0);
     ~MenuWindow();
+
+private slots:
+    void on_settingButton_clicked();
 
 private:
     Ui::MenuWindow *ui;

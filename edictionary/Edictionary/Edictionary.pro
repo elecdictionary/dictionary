@@ -20,7 +20,13 @@ SOURCES += main.cpp\
     adjustwindow.cpp \
     registerwindow.cpp \
     wordnote.cpp \
-    menuwindow.cpp
+    menuwindow.cpp \
+    makeuser.cpp \
+    usermodify.cpp \
+    database.cpp \
+    searchwordwindow.cpp \
+    userlearn.cpp \
+    vocabulary.cpp
 
 HEADERS  += mainwindow.h \
     edicuser.h \
@@ -29,9 +35,18 @@ HEADERS  += mainwindow.h \
     adjustwindow.h \
     registerwindow.h \
     wordnote.h \
-    menuwindow.h
+    menuwindow.h \
+    makeuser.h \
+    usermodify.h \
+    database.h \
+    searchwordwindow.h \
+    userlearn.h \
+    vocabulary.h
 
 FORMS    += mainwindow.ui \
     adjustwindow.ui \
     registerwindow.ui \
-    menuwindow.ui
+    menuwindow.ui \
+    searchwordwindow.ui
+
+CONFIG    += c++11

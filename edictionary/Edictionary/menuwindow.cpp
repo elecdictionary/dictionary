@@ -13,3 +13,11 @@ MenuWindow::~MenuWindow()
 {
     delete ui;
 }
+
+void MenuWindow::on_settingButton_clicked()
+{
+    AdjustWindow *adjustWindow;
+    adjustWindow = new AdjustWindow(Ediccon, this);
+    adjustWindow->show();
+    this->hide();
+}

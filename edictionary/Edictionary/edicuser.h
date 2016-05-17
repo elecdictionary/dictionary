@@ -2,6 +2,8 @@
 #define EDICUSER_H
 
 #include <string>
+#include "makeuser.h"
+#include "usermodify.h"
 
 class edicuser
 {
@@ -9,6 +11,8 @@ private:
     std::string username;
     int status;//用户状态 是否登录
     int stranum, stralev, wordnum;//难度和数目和已背单词数
+    usermodify *userModify;
+    makeuser *makeUser;
 public:
     bool Login(std::string name, std::string password);//用户登录
     bool UserRegister(std::string name, std::string password);//用户注册

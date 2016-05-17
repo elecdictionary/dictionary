@@ -30,6 +30,10 @@ public:
     QPushButton *settingButton;
     QLabel *label;
     QPushButton *logoutButton;
+    QPushButton *adjpasswordButton;
+    QPushButton *searchwordButton;
+    QPushButton *reciteButton;
+    QPushButton *textsearchButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -42,7 +46,7 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         settingButton = new QPushButton(centralwidget);
         settingButton->setObjectName(QStringLiteral("settingButton"));
-        settingButton->setGeometry(QRect(300, 100, 141, 31));
+        settingButton->setGeometry(QRect(170, 140, 141, 31));
         QFont font;
         font.setFamily(QStringLiteral("Agency FB"));
         font.setPointSize(12);
@@ -57,6 +61,27 @@ public:
         logoutButton = new QPushButton(centralwidget);
         logoutButton->setObjectName(QStringLiteral("logoutButton"));
         logoutButton->setGeometry(QRect(660, 300, 41, 31));
+        adjpasswordButton = new QPushButton(centralwidget);
+        adjpasswordButton->setObjectName(QStringLiteral("adjpasswordButton"));
+        adjpasswordButton->setGeometry(QRect(170, 210, 141, 31));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Agency FB"));
+        font2.setPointSize(11);
+        adjpasswordButton->setFont(font2);
+        searchwordButton = new QPushButton(centralwidget);
+        searchwordButton->setObjectName(QStringLiteral("searchwordButton"));
+        searchwordButton->setGeometry(QRect(420, 120, 750, 399));
+        searchwordButton->setMinimumSize(QSize(750, 399));
+        searchwordButton->setMaximumSize(QSize(750, 399));
+        searchwordButton->setFont(font2);
+        reciteButton = new QPushButton(centralwidget);
+        reciteButton->setObjectName(QStringLiteral("reciteButton"));
+        reciteButton->setGeometry(QRect(420, 180, 141, 31));
+        reciteButton->setFont(font2);
+        textsearchButton = new QPushButton(centralwidget);
+        textsearchButton->setObjectName(QStringLiteral("textsearchButton"));
+        textsearchButton->setGeometry(QRect(420, 240, 141, 31));
+        textsearchButton->setFont(font2);
         MenuWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MenuWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -77,6 +102,10 @@ public:
         settingButton->setText(QApplication::translate("MenuWindow", "\350\256\276\347\275\256", 0));
         label->setText(QApplication::translate("MenuWindow", "\344\270\273\350\217\234\345\215\225", 0));
         logoutButton->setText(QApplication::translate("MenuWindow", "\347\231\273\345\207\272", 0));
+        adjpasswordButton->setText(QApplication::translate("MenuWindow", "\344\277\256\346\224\271\345\257\206\347\240\201", 0));
+        searchwordButton->setText(QApplication::translate("MenuWindow", "\346\237\245\345\215\225\350\257\215", 0));
+        reciteButton->setText(QApplication::translate("MenuWindow", "\350\203\214\345\215\225\350\257\215", 0));
+        textsearchButton->setText(QApplication::translate("MenuWindow", "\346\226\207\346\234\254\347\224\237\350\257\215\346\243\200\347\264\242", 0));
     } // retranslateUi
 
 };
