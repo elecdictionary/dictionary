@@ -17,6 +17,7 @@ void vocabulary :: GetWords(std::vector<wordnote> &allwords)
                 voca.append(line, 0, pos);
 
                 cword = Convert(voca);
+                commend = new char[100];
                 strcpy(commend, "mkdir words\\");
                 strcat(commend, cword);
                 system(commend);
@@ -77,10 +78,7 @@ void vocabulary :: Sentence(std::vector<std::string> &allst, std::string word)
     }
 }
 
-vocabulary::~vocabulary()
-{
-
-}
+vocabulary::~vocabulary(){}
 
 
 

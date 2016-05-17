@@ -18,6 +18,7 @@ userlearn :: userlearn(std::string sname)//: capacity(14330)
 
     //建立当天文件夹
     char *commend;
+    commend = new char[100];
     std::time_t t = time(0);
     strftime(date, 20, "%Y/%m/%d", localtime(&t));
     strcpy(commend, "mkdir record\\");
@@ -31,6 +32,7 @@ void userlearn :: Learn(std::string sword)
 {
     char *filename, *name;
     name = Convert(username);
+    filename = new char[100];
     strcpy(filename, "record\\");
     strcat(filename, name);
     strcat(filename, "\\");
@@ -99,12 +101,8 @@ void userlearn :: Sentence(std::vector<std::string> &allst, std::string sword)
 }
 
 int userlearn :: WordRemembered()
-{/*
-    int sum;
-    for (int i = 0; i < capacity; i++)
-        if (learningset[i] == 3)
-            sum++;
-    return sum;*/
+{
+
 }
 
 userlearn :: ~userlearn()

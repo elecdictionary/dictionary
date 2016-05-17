@@ -2,10 +2,7 @@
 
 makeuser :: makeuser(): namelen(80), codelen(80), userlev(0), usernum(0), capacity(14330) {}
 
-makeuser::~makeuser()
-{
-
-}
+makeuser::~makeuser() {}
 
 bool makeuser :: CheckName(std::string sname)
 {
@@ -42,10 +39,12 @@ void makeuser :: GetUser(std::string sname, std::string scode)
 
     //make folders
     char *commend;
+    commend = new char[100];
     strcpy(commend, "mkdir users\\");
     strcat(commend, name);
     system(commend);
     delete commend;
+    commend = new char[100];
     strcpy(commend, "mkdir record\\");
     strcat(commend, name);
     system(commend);
