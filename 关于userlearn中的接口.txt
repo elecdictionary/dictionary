@@ -1,0 +1,31 @@
+关于修改例句的问题：
+你需要#include "allstruct.h"
+其中mysentences中含有两个string 成员，分别为Chinese，English，我需要你给我提供三个接口
+1.使我可以增加用户A（string）对于单词B（string）的例句C（mysentences）
+2.使我可以获得用户A关于单词B的所有例句（通过传一个vector<mysentences>&的方法）
+3.使我可以获得词库中原本关于单词B的所有例句（类似2单由于目前我们暂时没有例句，可以暂时只实现这部分功能或直接返回""）。
+
+关于用户背单词记录的问题：
+我需要你实现下列接口：
+1.接收并创建当日的临时记录，格式（mydate，vector(mywordrecord)）两个参数分别表示日期及当前要背的单词内容及完成情况
+注：
+1）.你需要#include "mydate.h"才能使用mydate
+void GetDate();获取当前时间并存入类中。
+
+int getYear() const;
+int getMonth() const;
+int getDay() const;
+表示获取年月日
+
+2）.mywordrecord在mystruct.h中
+包含两个成员：string Vocabulary 和 int Record
+分别表示这个单词是否已经背过，即前一部分record为1，后一部分record为0；
+
+2.一个int类型接口，如果今天存在未完成任务返回1，尚未背过单词返回0，已经背完单词返回2
+  同时如果有未完成任务则通过传引用的方式把文件内容装进vector<mywordrecord>
+
+3.当今天任务结束时我需要一个接口，我会把今天的背单词情况通过vector<mywordrecord>传回去，不会出现重复词，rdcord为1表示该词一次背过0表示经过多次才背过。
+
+4.我需要一个接口，能够查询用户A对于单词B是已经牢记（如连续两次一次背过）。
+P.S. 需要注意的是对于每天的临时文件应该及时清理或覆盖。
+     最新的源文件我会稍后上传。
