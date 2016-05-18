@@ -12,11 +12,15 @@ char* database :: Convert(std::string str)
 char* database :: Path(const char* folder, char* name, const char* file)
 {
     char *pt;
-    strcpy(pt, ".\\");
-    strcat(pt, folder);
+    pt = new char[100];
+    strcpy(pt, folder);
     strcat(pt, "\\");
     strcat(pt, name);
     strcat(pt, "\\");
     strcat(pt, file);
     return pt;
 }
+
+database::database(){}
+
+database::~database(){}

@@ -29,7 +29,7 @@ bool ediccontroler::GetTestPaper(std::vector<wordnote> &testpaper)
     return 1;
 }
 
-int ediccontroler::GetVocaList(std::string vocabulary, std::vector<wordnote>& vocalist)
+int ediccontroler::GetVocaList(std::string vocabulary, wordnote &vocalist)
 {
     if(User->getStatus() == 0)
         return 0;//
@@ -37,15 +37,16 @@ int ediccontroler::GetVocaList(std::string vocabulary, std::vector<wordnote>& vo
     for(it = dictionary.begin(); it != dictionary.end(); it ++)
     {
         if(vocabulary == (*it).getVoca()){
-            vocalist.push_back(*it);
+            vocalist = (*it);
             return 1;//成功获取
         }
     }
     return 2;//表示不存在该单词，未处理文件丢失等情况
 }
 
-void ediccontroler::GetSentences(std::string vocabulary, std::vector<std::string> &sentences)
+void ediccontroler::GetSentences(std::string vocabulary, std::vector<mysentences> &sentences)
 {
+
     //...将用户自定义例句放入sentences中
 }
 
@@ -58,6 +59,7 @@ void ediccontroler::Init()
 ediccontroler::ediccontroler()
 {
     User = new edicuser();
+    Dicdata = new vocabulary();
     Init();
 }
 

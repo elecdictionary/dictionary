@@ -31,9 +31,9 @@ public:
     QLabel *label;
     QPushButton *logoutButton;
     QPushButton *adjpasswordButton;
-    QPushButton *searchwordButton;
     QPushButton *reciteButton;
     QPushButton *textsearchButton;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -68,12 +68,6 @@ public:
         font2.setFamily(QStringLiteral("Agency FB"));
         font2.setPointSize(11);
         adjpasswordButton->setFont(font2);
-        searchwordButton = new QPushButton(centralwidget);
-        searchwordButton->setObjectName(QStringLiteral("searchwordButton"));
-        searchwordButton->setGeometry(QRect(420, 120, 750, 399));
-        searchwordButton->setMinimumSize(QSize(750, 399));
-        searchwordButton->setMaximumSize(QSize(750, 399));
-        searchwordButton->setFont(font2);
         reciteButton = new QPushButton(centralwidget);
         reciteButton->setObjectName(QStringLiteral("reciteButton"));
         reciteButton->setGeometry(QRect(420, 180, 141, 31));
@@ -82,6 +76,10 @@ public:
         textsearchButton->setObjectName(QStringLiteral("textsearchButton"));
         textsearchButton->setGeometry(QRect(420, 240, 141, 31));
         textsearchButton->setFont(font2);
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(420, 130, 141, 31));
+        pushButton->setFont(font2);
         MenuWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MenuWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -103,9 +101,9 @@ public:
         label->setText(QApplication::translate("MenuWindow", "\344\270\273\350\217\234\345\215\225", 0));
         logoutButton->setText(QApplication::translate("MenuWindow", "\347\231\273\345\207\272", 0));
         adjpasswordButton->setText(QApplication::translate("MenuWindow", "\344\277\256\346\224\271\345\257\206\347\240\201", 0));
-        searchwordButton->setText(QApplication::translate("MenuWindow", "\346\237\245\345\215\225\350\257\215", 0));
         reciteButton->setText(QApplication::translate("MenuWindow", "\350\203\214\345\215\225\350\257\215", 0));
         textsearchButton->setText(QApplication::translate("MenuWindow", "\346\226\207\346\234\254\347\224\237\350\257\215\346\243\200\347\264\242", 0));
+        pushButton->setText(QApplication::translate("MenuWindow", "\346\237\245\345\215\225\350\257\215", 0));
     } // retranslateUi
 
 };

@@ -17,10 +17,15 @@ AdjustWindow::~AdjustWindow()
 void AdjustWindow::on_applyButton_clicked()
 {
     Ediccon->User->AdjSettings(ui->stranumBox->value(), ui->stralevBox->value());//修改设置
-    QMessageBox box(QMessageBox::NoIcon, "修改设置成功", "");
-    box.setStandardButtons(QMessageBox::Ok);
-    box.setButtonText(QMessageBox::Ok, "完成");
-    box.exec();
+    /*QMessageBox box(QMessageBox::Warning, "修改设置成功", "修改设置成功", QMessageBox::NoButton, this);
+    box.setStandardButtons(QMessageBox::Retry);
+    box.setButtonText(QMessageBox::Retry, "完成");
+    box.exec();*/
+    QMessageBox *box;
+    box = new QMessageBox(this);
+    box->setWindowTitle("提示");
+    box->setText("修改设置成功");
+    box->show();
 }
 
 void AdjustWindow::on_retButton_clicked()

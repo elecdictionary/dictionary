@@ -21,3 +21,11 @@ void MenuWindow::on_settingButton_clicked()
     adjustWindow->show();
     this->hide();
 }
+
+void MenuWindow::on_pushButton_clicked()
+{
+    SearchwordWindow *searchwordWindow;
+    searchwordWindow = new SearchwordWindow(Ediccon, this);
+    searchwordWindow->show();
+    this->hide();
+}

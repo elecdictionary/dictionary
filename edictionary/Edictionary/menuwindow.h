@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "ediccontroler.h"
 #include "adjustwindow.h"
+#include "searchwordwindow.h"
 
 namespace Ui {
 class MenuWindow;
@@ -20,6 +21,8 @@ public:
 
 private slots:
     void on_settingButton_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MenuWindow *ui;

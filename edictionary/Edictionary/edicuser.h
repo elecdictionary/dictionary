@@ -4,6 +4,8 @@
 #include <string>
 #include "makeuser.h"
 #include "usermodify.h"
+#include "allstruct.h"
+#include "userlearn.h"
 
 class edicuser
 {
@@ -13,6 +15,8 @@ private:
     int stranum, stralev, wordnum;//难度和数目和已背单词数
     usermodify *userModify;
     makeuser *makeUser;
+    userlearn *Userdatabase;
+
 public:
     bool Login(std::string name, std::string password);//用户登录
     bool UserRegister(std::string name, std::string password);//用户注册
@@ -20,6 +24,7 @@ public:
     bool CheckUserName(std::string name);//判断用户名是否已存在
     void Init();//初始化
     bool AdjSettings(int num, int lev);//调整设置
+    bool AddSentences(std::string vocabulary, std::string sentence, std::string chinese);//用户添加例句
 
     edicuser();
     ~edicuser();

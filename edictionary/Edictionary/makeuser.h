@@ -2,11 +2,12 @@
 #define MAKEUSER_H
 
 #include "database.h"
+#include <sys/stat.h>
 
 
 class makeuser : public database{
 protected:
-    const int namelen, codelen;
+    const int namelen, codelen, capacity;
     int userlev, usernum;
 public:
     bool CheckName(std::string sname);

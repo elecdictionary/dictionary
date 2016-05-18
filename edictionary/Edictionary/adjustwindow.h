@@ -2,8 +2,8 @@
 #define ADJUSTWINDOW_H
 
 #include <QMainWindow>
-#include "ediccontroler.h"
 #include <QMessageBox>
+#include "ediccontroler.h"
 
 namespace Ui {
 class AdjustWindow;

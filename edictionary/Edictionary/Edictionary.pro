@@ -26,7 +26,11 @@ SOURCES += main.cpp\
     database.cpp \
     searchwordwindow.cpp \
     userlearn.cpp \
-    vocabulary.cpp
+    vocabulary.cpp \
+    addsentenceswindow.cpp \
+    mydate.cpp \
+    recitewordwindow.cpp \
+    vocabularyinfowindow.cpp
 
 HEADERS  += mainwindow.h \
     edicuser.h \
@@ -41,12 +45,21 @@ HEADERS  += mainwindow.h \
     database.h \
     searchwordwindow.h \
     userlearn.h \
-    vocabulary.h
+    vocabulary.h \
+    mysentences.h \
+    addsentenceswindow.h \
+    allstruct.h \
+    mydate.h \
+    recitewordwindow.h \
+    vocabularyinfowindow.h
 
 FORMS    += mainwindow.ui \
     adjustwindow.ui \
     registerwindow.ui \
     menuwindow.ui \
-    searchwordwindow.ui
+    searchwordwindow.ui \
+    addsentenceswindow.ui \
+    recitewordwindow.ui \
+    vocabularyinfowindow.ui
 
 CONFIG    += c++11

@@ -9,7 +9,9 @@ class vocabulary : public database
 public:
     void GetWords(std::vector<wordnote> &allwords);
     void Sentence(std::vector<std::string> &allst, std::string word);
+    //void AddSentence(std::string word);
     vocabulary();
     ~vocabulary();
 };
+
 #endif //VOCABULARY_H

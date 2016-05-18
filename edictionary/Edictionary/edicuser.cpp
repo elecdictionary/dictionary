@@ -84,6 +84,7 @@ void edicuser::Init()
 {
     status = 1;
     userModify = new usermodify(username);
+    //Userdatabase = new userlearn(username);
     stralev = userModify->ShowLevel();
     stranum = userModify->ShowNum();
     //...读取已背单词数
@@ -98,6 +99,12 @@ bool edicuser::AdjSettings(int num, int lev)
     return 1;
 }
 
+bool edicuser::AddSentences(std::string vocabulary, std::string sentence, std::string chinese)
+{
+    //...在词库中位用户中添加例句要判断单词是否存在还要略去首尾空格
+    return 1;
+}
+
 edicuser::edicuser()
 {
     status = 0;//表示未登录
@@ -106,5 +113,6 @@ edicuser::edicuser()
 
 edicuser::~edicuser()
 {
-
+    delete userModify;
+    delete makeUser;
 }

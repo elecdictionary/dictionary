@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_loginButton_clicked()
 {
-    if(Ediccon->User->Login(ui->userName->text().toStdString(), ui->password->text().toStdString())){
+    if(ui->userName->text() != "" && Ediccon->User->Login(ui->userName->text().toStdString(), ui->password->text().toStdString())){
         MenuWindow *menuWindow;
         menuWindow = new MenuWindow(Ediccon, this);
         this->hide();

@@ -29,8 +29,8 @@
    <widget class="QLineEdit" name="wordlineEdit">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>95</y>
+      <x>310</x>
+      <y>85</y>
       <width>141</width>
       <height>21</height>
      </rect>
@@ -39,8 +39,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>90</y>
+      <x>220</x>
+      <y>80</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -52,8 +52,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>40</y>
+      <x>290</x>
+      <y>30</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -69,10 +69,13 @@
     </property>
    </widget>
    <widget class="QTextEdit" name="sentencesEdit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>210</y>
+      <x>170</x>
+      <y>200</y>
       <width>391</width>
       <height>131</height>
      </rect>
@@ -81,8 +84,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>190</y>
+      <x>170</x>
+      <y>180</y>
       <width>54</width>
       <height>12</height>
      </rect>
@@ -94,8 +97,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>130</y>
+      <x>170</x>
+      <y>120</y>
       <width>54</width>
       <height>12</height>
      </rect>
@@ -105,26 +108,70 @@
     </property>
    </widget>
    <widget class="QTextEdit" name="wordinfoEdit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>150</y>
+      <x>170</x>
+      <y>140</y>
       <width>391</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="documentTitle">
+     <string/>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="searchButton">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>90</y>
+      <x>470</x>
+      <y>80</y>
       <width>43</width>
       <height>27</height>
      </rect>
     </property>
     <property name="text">
      <string>search</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="returnButton">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>310</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>返回</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addsentencesButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>80</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>添加例句</string>
     </property>
    </widget>
   </widget>
