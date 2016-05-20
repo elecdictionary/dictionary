@@ -1,5 +1,7 @@
 #include "vocabulary.h"
 
+vocabulary :: vocabulary () {}
+
 void vocabulary :: GetWords(std::vector<wordnote> &allwords)
 {
     std::string line;

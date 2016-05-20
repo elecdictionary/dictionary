@@ -19,7 +19,7 @@ vocabulary.Sentence(std::vector<std::string> &allst, std::string word)----将一个
 
 userlearn(std::string name)----获取当前用户
 userlearn.TempRecord(std::vector<mywordrecord> record)----创建一个临时文件记录当前记忆情况
-bool userlearn.GetTemp(std::vector<mywordrecord> &record)----将临时文件传出。false表明没有要背的了或者第二天
+int userlearn.GetTemp(std::vector<mywordrecord> &record)----将临时文件传出
 userlearn.MakeRecord(std::vector<mywordrecord> record)----记录上次记忆情况
 userlearn.GetNotRemembered(std::vector<std::string> &words)----传出上次需要复习单词
 userlearn.MakeWordInfo(std::vector<mywordrecord> record)----检查并更改单词信息

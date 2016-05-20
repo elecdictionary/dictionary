@@ -63,6 +63,8 @@ void userlearn :: MakeRecord(std::vector<mywordrecord> record)
     name = Convert(username);
     filename = Path("record", name, "last.info");
     std::ofstream fout(filename);
+    if (!fout)
+        return;
     for (int i = 0; i < record.size(); i++)
     {
         fout << record[i].Vocabulary << " " << record[i].Record << std::endl;
