@@ -1,6 +1,7 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
+#include "allstruct.h"
 #include <vector>
 #include <cstdlib>
 #include <iostream>

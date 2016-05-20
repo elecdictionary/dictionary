@@ -5,8 +5,6 @@ usermodify :: usermodify(std::string sname)
     username = Convert(sname);
 }
 
-usermodify::~usermodify(){}
-
 int usermodify :: ShowLevel()
 {
     char* filename;
@@ -38,6 +36,7 @@ std::string usermodify :: ShowCode()
     file.getline(name, namelen);
     file.getline(code, codelen);
     char *codenow;
+    codenow = new char[100];
     strcpy(codenow, code);
     std::string scode(codenow);
     return scode;
@@ -58,20 +57,35 @@ void usermodify :: SetNum(int num)
     usernum = num;
 }
 
-void usermodify :: Save()
+void usermodify :: SaveCode()
+{
+    if (!newcode)
+        return;
+    char *filename;
+    filename = Path("users", username, "standard.info");
+    std::ofstream modify;
+    modify.open(filename);
+    modify << username << std::endl;
+    modify << newcode << std::endl;
+    modify.close();
+}
+
+void usermodify :: SaveLevNum()
 {
     char* filename;
-    std::ofstream modify;
-
-    GetUser(username, newcode);
-
     filename = Path("users", username, "level.info");
+    std::ofstream modify;
     modify.open(filename);
     modify << userlev << std::endl;
     modify.close();
-
     filename = Path("users", username, "number.info");
     modify.open(filename);
     modify << usernum << std::endl;
     modify.close();
+}
+
+usermodify::~usermodify()
+{
+    delete newcode;
+    delete username;
 }

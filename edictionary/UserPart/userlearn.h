@@ -7,15 +7,19 @@
 class userlearn : public database{
 private:
     std::string username;
-    int learningset[14330];
     char *date;
+    std::vector<mywordrecord> allrecord;
     //char* Path(const char* folder, char* name, const char* file);
 public:
-    void Learn(std::string word);
+    void TempRecord(std::vector<mywordrecord> record);
+    int GetTemp(std::vector<mywordrecord> &record);
+    void MakeRecord(std::vector<mywordrecord> record);
+    void GetNotRemembered(std::vector<std::string> &words);
+    void MakeWordInfo(std::vector<mywordrecord> record);
     void Record(std::string word);
     bool CheckWord(std::string word);
-    void AddSentence(std::string sword, std::string stc);
-    void Sentence(std::vector<std::string> &allst, std::string sword);
+    void AddSentence(std::string sword, mysentences stc);
+    void Sentence(std::vector<mysentences> &allst, std::string sword);
     int WordRemembered();
     userlearn(std::string sname);
     ~userlearn();

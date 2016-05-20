@@ -60,7 +60,7 @@ void vocabulary :: GetWords(std::vector<wordnote> &allwords)
     word = NULL;
 }
 
-void vocabulary :: Sentence(std::vector<std::string> &allst, std::string word)
+void vocabulary :: Sentence(std::vector<mysentences> &allst, std::string word)
 {
     char *filename, *cword;
     cword = Convert(word);
@@ -68,13 +68,16 @@ void vocabulary :: Sentence(std::vector<std::string> &allst, std::string word)
     std::ifstream st(filename);
     if (!st)
         return;
-    std::string stc;
+    mysentences *stc;
     while (!st.eof())
     {
-        std::getline(st, stc);
-        stc[stc.length()-1] = '\0';
-        allst.push_back(stc);
-        stc.clear();
+        stc = new mysentences;
+        std::getline(st, stc->English);
+        stc->English[stc->English.length()-1] = '\0';
+        std::getline(st, stc->Chinese);
+        stc->Chinese[stc->Chinese.length()-1] = '\0';
+        allst.push_back(*stc);
+        delete stc;
     }
 }
 

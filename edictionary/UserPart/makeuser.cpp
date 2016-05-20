@@ -20,7 +20,7 @@ bool makeuser :: CheckName(std::string sname)
         alluser.getline(username, namelen);
         if (strcmp(name, username) == 0)
         {
-            std::cout << "This name has been already used!" << std::endl;
+            //std::cout << "This name has been already used!" << std::endl;
             alluser.close();
             return false;
         }
@@ -74,10 +74,13 @@ void makeuser :: GetUser(std::string sname, std::string scode)
     fout << name << std::endl;
     fout.close();
 
-    filename = Path("record", name, "learningset.info");
+    filename = Path("record", name, "wordinfo.info");
+    vocabulary makewords;
+    std::vector<wordnote> words;
+    makewords.GetWords(words);
     fout.open(filename);
-    for (int i = 0; i < capacity; i++)
-        fout << 0 << std::endl;
+    for (int i = 0; i < words.size(); i++)
+        fout << words[i].getVoca() << " " << 0 << std::endl;
     fout.close();
     delete filename;
 }
