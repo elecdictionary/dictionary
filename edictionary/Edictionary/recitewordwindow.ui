@@ -58,7 +58,7 @@
      <string>休息一下</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="wordEdit">
     <property name="enabled">
      <bool>false</bool>
     </property>
@@ -90,7 +90,7 @@
      <string>我记得</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="forgetButton">
     <property name="geometry">
      <rect>
       <x>420</x>

@@ -8,6 +8,7 @@
 #include "wordnote.h"
 #include "addsentenceswindow.h"
 #include "allstruct.h"
+#include "mylog.h"
 
 
 namespace Ui {

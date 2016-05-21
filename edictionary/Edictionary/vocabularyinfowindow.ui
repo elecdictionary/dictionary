@@ -94,7 +94,7 @@
      </font>
     </property>
     <property name="text">
-     <string>单词查询</string>
+     <string>单词信息</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">

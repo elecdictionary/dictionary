@@ -76,6 +76,7 @@ public:
         stranumBox->setObjectName(QStringLiteral("stranumBox"));
         stranumBox->setGeometry(QRect(400, 180, 42, 22));
         stranumBox->setMinimum(10);
+        stranumBox->setValue(50);
         stralevBox = new QSpinBox(centralwidget);
         stralevBox->setObjectName(QStringLiteral("stralevBox"));
         stralevBox->setGeometry(QRect(400, 130, 42, 22));

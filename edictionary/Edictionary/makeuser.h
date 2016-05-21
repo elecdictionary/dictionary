@@ -2,7 +2,7 @@
 #define MAKEUSER_H
 
 #include "database.h"
-#include <sys/stat.h>
+#include "vocabulary.h"
 
 
 class makeuser : public database{

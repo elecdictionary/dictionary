@@ -9,7 +9,7 @@ struct mysentences{
 
 struct mywordrecord{
     std::string Vocabulary;
-    int record;
+    int Record;
 };//用来记录单词背诵结果
 
 #endif // ALLSTRUCT_H

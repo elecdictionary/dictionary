@@ -215,6 +215,18 @@
      <string/>
     </property>
    </widget>
+   <zorder>username</zorder>
+   <zorder>label_2</zorder>
+   <zorder>password</zorder>
+   <zorder>label</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>password_2</zorder>
+   <zorder>registerButton</zorder>
+   <zorder>ret_Button</zorder>
+   <zorder>checkBox</zorder>
+   <zorder>checkBox_2</zorder>
+   <zorder>checkBox_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

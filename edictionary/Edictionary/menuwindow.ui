@@ -122,7 +122,7 @@
      <string>文本生词检索</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="searchwordButton">
     <property name="geometry">
      <rect>
       <x>420</x>

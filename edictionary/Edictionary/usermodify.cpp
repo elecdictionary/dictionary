@@ -5,8 +5,6 @@ usermodify :: usermodify(std::string sname)
     username = Convert(sname);
 }
 
-usermodify::~usermodify(){}
-
 int usermodify :: ShowLevel()
 {
     char* filename;
@@ -21,7 +19,7 @@ int usermodify :: ShowLevel()
 int usermodify :: ShowNum()
 {
     char* filename;
-    filename = Path("users", username, "num.info");
+    filename = Path("users", username, "number.info");
     std::ifstream file(filename);
     int num;
     file >> num;
@@ -59,29 +57,35 @@ void usermodify :: SetNum(int num)
     usernum = num;
 }
 
-void usermodify :: Save()
+void usermodify :: SaveCode()
 {
-    /*std::ofstream fout;
-    fout.open("test.txt");
-    fout << "******" << std::endl;*/
-
-    char* filename;
+    if (!newcode)
+        return;
+    char *filename;
+    filename = Path("users", username, "standard.info");
     std::ofstream modify;
+    modify.open(filename);
+    modify << username << std::endl;
+    modify << newcode << std::endl;
+    modify.close();
+}
 
-    //GetUser(username, newcode);
-
-   // fout << "******" << std::endl;
-
+void usermodify :: SaveLevNum()
+{
+    char* filename;
     filename = Path("users", username, "level.info");
+    std::ofstream modify;
     modify.open(filename);
     modify << userlev << std::endl;
     modify.close();
-
-    //fout << "******" << std::endl;
-
     filename = Path("users", username, "number.info");
     modify.open(filename);
     modify << usernum << std::endl;
     modify.close();
-        //fout.close();
+}
+
+usermodify::~usermodify()
+{
+    delete newcode;
+    delete username;
 }

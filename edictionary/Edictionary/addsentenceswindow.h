@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include "ediccontroler.h"
+#include <string>
+#include "mylog.h"
 
 namespace Ui {
 class AddsentencesWindow;
@@ -16,6 +18,7 @@ class AddsentencesWindow : public QMainWindow
 
 public:
     explicit AddsentencesWindow(ediccontroler *Edic, QWidget *parent = 0);
+    AddsentencesWindow(QString Vocabulary, ediccontroler *Edic, QWidget *parent = 0);
     ~AddsentencesWindow();
 
 private slots:

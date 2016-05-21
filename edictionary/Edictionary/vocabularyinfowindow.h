@@ -3,8 +3,10 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QShowEvent>
 #include "allstruct.h"
 #include "ediccontroler.h"
+#include "addsentenceswindow.h"
 
 namespace Ui {
 class VocabularyInfoWindow;
@@ -16,8 +18,13 @@ class VocabularyInfoWindow : public QMainWindow
     ediccontroler *Ediccon;
 
 public:
-    explicit VocabularyInfoWindow(ediccontroler *Edic, QWidget *parent = 0);
+    explicit VocabularyInfoWindow(QString Vocabulary, ediccontroler *Edic, QWidget *parent = 0);
     ~VocabularyInfoWindow();
+
+private slots:
+    void on_addsentencesButton_clicked();
+
+    void on_returnButton_clicked();
 
 private:
     Ui::VocabularyInfoWindow *ui;

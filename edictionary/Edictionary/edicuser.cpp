@@ -16,7 +16,7 @@ void edicuser::setStranum(int value)
     if(!status) return ;
     stranum = value;
     userModify->SetNum(value);
-    userModify->Save();
+    userModify->SaveLevNum();
 }
 
 int edicuser::getStralev() const
@@ -29,7 +29,7 @@ void edicuser::setStralev(int value)
     if(!status) return ;
     stralev = value;
     userModify->SetLevel(value);
-    userModify->Save();
+    userModify->SaveLevNum();
 }
 
 std::string edicuser::getUsername() const
@@ -72,6 +72,8 @@ bool edicuser::Logout()
     username = "";
     stralev = 0;
     stranum = 0;
+    delete userLearn;
+    delete userModify;
     return 1;
 }
 
@@ -82,11 +84,14 @@ bool edicuser::CheckUserName(std::string name)
 
 void edicuser::Init()
 {
+    //MyLog mylog;
     status = 1;
     userModify = new usermodify(username);
-    //Userdatabase = new userlearn(username);
+    userLearn = new userlearn(username);
     stralev = userModify->ShowLevel();
     stranum = userModify->ShowNum();
+    //mylog.print(userModify->ShowLevel());
+    //mylog.print(userModify->ShowNum());
     //...读取已背单词数
 }
 
@@ -99,10 +104,84 @@ bool edicuser::AdjSettings(int num, int lev)
     return 1;
 }
 
+bool edicuser::ChangePassword(std::string formalpassword, std::string newpassword)
+{
+    if(formalpassword != userModify->ShowCode()){
+        return 0;
+    }
+    else{
+        userModify->ChangeCode(newpassword);
+        userModify->SaveCode();
+        return 1;
+    }
+}
+
 bool edicuser::AddSentences(std::string vocabulary, std::string sentence, std::string chinese)
 {
-    //...在词库中位用户中添加例句要判断单词是否存在还要略去首尾空格
+    //MyLog mylog;
+
+    //std::string esentence, csentence;
+    mysentences ret;
+    int lene, lenc;
+    lenc = lene = 0;
+    /*for(auto i:sentence)
+    {
+        if(i != '\n'){
+            esentence[lene ++] = i;
+        }
+    }
+    for(auto i:chinese)
+    {
+        if(i != '\n'){
+            csentence[lene ++] = i;
+        }
+    }*/
+    ret.English = sentence;
+    ret.Chinese = chinese;
+    //过滤回车功能有问题
+    //mylog.print(0);
+    userLearn->AddSentence(vocabulary, ret);
+    //mylog.print(1);
     return 1;
+}
+
+bool edicuser::TempSave(std::vector<mywordrecord> wordtest)
+{
+    userLearn->TempRecord(wordtest);
+    return 1;
+}
+
+bool edicuser::FinalSave(std::vector<mywordrecord> testinfo)
+{
+    userLearn->MakeRecord(testinfo);
+    return 1;
+}
+
+bool edicuser::CheckRecited(std::string vocabulary)
+{
+    return userLearn->CheckWord(vocabulary);
+}
+
+bool edicuser::GetLasttimeVocabulary(std::vector<std::string> &lasttimevocabulary)
+{
+    //MyLog mylog;
+    //mylog.print(0);
+    userLearn->GetNotRemembered(lasttimevocabulary);
+    //mylog.print(1);
+    return 1;
+}
+
+bool edicuser::GetSentences(std::string vocabulary, std::vector<mysentences> &sentences)
+{
+    userLearn->Sentence(sentences, vocabulary);
+    return 1;
+}
+
+int edicuser::GetTempRecord(std::vector<mywordrecord> &temprecord)
+{
+    int ret;
+    ret = userLearn->GetTemp(temprecord);
+    return ret;
 }
 
 edicuser::edicuser()
@@ -115,4 +194,5 @@ edicuser::~edicuser()
 {
     delete userModify;
     delete makeUser;
+    delete userLearn;
 }

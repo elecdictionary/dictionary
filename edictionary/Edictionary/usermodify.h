@@ -13,7 +13,8 @@ public:
     std::string ShowCode();
     void SetLevel(int level);
     void SetNum(int num);
-    void Save();
+    void SaveCode();
+    void SaveLevNum();
     usermodify(std::string sname);
     ~usermodify();
 };

@@ -1,5 +1,7 @@
 #include "vocabulary.h"
 
+vocabulary :: vocabulary () {}
+
 void vocabulary :: GetWords(std::vector<wordnote> &allwords)
 {
     std::string line;
@@ -7,25 +9,33 @@ void vocabulary :: GetWords(std::vector<wordnote> &allwords)
     std::string voca, pronun, cat, chinese;
     char *commend, *cword;
     wordnote *word;
-    while (getline(fin, line))
+
+    int t = 0;
+
+    while (!fin.eof())
     {
+        getline(fin, line);
         int beg=0, pos = 0;
         word = new wordnote;
-        for (pos; pos < line.length(); pos++)
+        for (pos = 0; pos < line.length(); pos++)
             if (line[pos] == '[')
             {
                 voca.append(line, 0, pos);
 
-                cword = Convert(voca);
+                /*cword = Convert(voca);
                 commend = new char[100];
                 strcpy(commend, "mkdir words\\");
                 strcat(commend, cword);
                 system(commend);
                 delete commend;
-                delete cword;
+                delete cword;*/
+
+                /*MyLog mylog;
+                if(t == 0)
+                    mylog.print(line);
+                t++;*/
 
                 word->setVoca(voca);
-                voca.clear();
                 beg = pos;
                 break;
             }
@@ -55,12 +65,13 @@ void vocabulary :: GetWords(std::vector<wordnote> &allwords)
             else
                 word->setLev(1);
         allwords.push_back(*word);
+        voca.clear();
         delete word;
     }
     word = NULL;
 }
 
-void vocabulary :: Sentence(std::vector<std::string> &allst, std::string word)
+void vocabulary :: Sentence(std::vector<mysentences> &allst, std::string word)
 {
     char *filename, *cword;
     cword = Convert(word);
@@ -68,19 +79,17 @@ void vocabulary :: Sentence(std::vector<std::string> &allst, std::string word)
     std::ifstream st(filename);
     if (!st)
         return;
-    std::string stc;
+    mysentences *stc;
     while (!st.eof())
     {
-        std::getline(st, stc);
-        stc[stc.length()-1] = '\0';
-        allst.push_back(stc);
-        stc.clear();
+        stc = new mysentences;
+        std::getline(st, stc->English);
+        stc->English[stc->English.length()-1] = '\0';
+        std::getline(st, stc->Chinese);
+        stc->Chinese[stc->Chinese.length()-1] = '\0';
+        allst.push_back(*stc);
+        delete stc;
     }
-}
-
-vocabulary::vocabulary()
-{
-
 }
 
 vocabulary::~vocabulary(){}

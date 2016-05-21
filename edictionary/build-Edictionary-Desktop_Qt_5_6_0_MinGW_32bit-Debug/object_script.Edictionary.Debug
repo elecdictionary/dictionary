@@ -15,8 +15,12 @@ INPUT(
 ./debug\userlearn.o
 ./debug\vocabulary.o
 ./debug\addsentenceswindow.o
-./debug\mydate.o
 ./debug\recitewordwindow.o
+./debug\vocabularyinfowindow.o
+./debug\changepasswordwindow.o
+./debug\searchtextwordwindow.o
+./debug\mylog.o
+./debug\textwordinfowindow.o
 ./debug\moc_mainwindow.o
 ./debug\moc_adjustwindow.o
 ./debug\moc_registerwindow.o
@@ -24,4 +28,8 @@ INPUT(
 ./debug\moc_searchwordwindow.o
 ./debug\moc_addsentenceswindow.o
 ./debug\moc_recitewordwindow.o
+./debug\moc_vocabularyinfowindow.o
+./debug\moc_changepasswordwindow.o
+./debug\moc_searchtextwordwindow.o
+./debug\moc_textwordinfowindow.o
 );

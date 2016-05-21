@@ -105,6 +105,18 @@ public:
         checkBox_3->setEnabled(false);
         checkBox_3->setGeometry(QRect(470, 210, 16, 21));
         RegisterWindow->setCentralWidget(centralwidget);
+        username->raise();
+        label_2->raise();
+        password->raise();
+        label->raise();
+        label_3->raise();
+        label_4->raise();
+        password_2->raise();
+        registerButton->raise();
+        ret_Button->raise();
+        checkBox->raise();
+        checkBox_2->raise();
+        checkBox_3->raise();
         menubar = new QMenuBar(RegisterWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
         menubar->setGeometry(QRect(0, 0, 750, 23));
