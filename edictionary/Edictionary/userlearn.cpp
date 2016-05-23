@@ -51,11 +51,10 @@ int userlearn :: GetTemp(std::vector<mywordrecord> &record)
     {
         list = new mywordrecord;
         fin >> list->Vocabulary >> list->Record;
-        if (list->Record == 0)
-            record.push_back(*list);
+        record.push_back(*list);
         delete list;
     }
-    if (record.size() == 0)
+    if (record[record.size()-1].Record == 1)
         return 2;
     return 1;
 }
@@ -93,20 +92,24 @@ void userlearn :: GetNotRemembered(std::vector<std::string> &words)
 
 void userlearn :: MakeWordInfo(std::vector<mywordrecord> record)
 {
-    char *filename, *name;
-    filename = Path("record", name, "wordinfo.info");
+    MyLog mylog;
+    char *filename, *name; 
     name = Convert(username);
+    filename = Path("record", name, "wordinfo.info");
     std::ifstream fin(filename);
     std::vector<mywordrecord> info;
     mywordrecord *list;
+    mylog.print(1);
     while (!fin.eof())
     {
         list = new mywordrecord;
         fin >> list->Vocabulary >> list->Record;
+        mylog.print(list->Vocabulary);
         info.push_back(*list);
         delete list;
     }
     fin.close();
+    mylog.print(2);
     for (int i = 0; i < record.size(); i++)
         for (int j = 0; j < info.size(); j++)
             if (info[j].Vocabulary.compare(record[i].Vocabulary) == 0)
@@ -116,12 +119,14 @@ void userlearn :: MakeWordInfo(std::vector<mywordrecord> record)
         fout << info[i].Vocabulary << " " << info[i].Record << std::endl;
     fout.close();
     delete filename;
+    mylog.print(3);
     filename = Path("record", name, "remembered.info");
     fout.open(filename);
     for (int i = 0; i < info.size(); i++)
         if (info[i].Record == 2)
             fout << info[i].Vocabulary << std::endl;
     fout.close();
+    mylog.print(4);
 }
 
 void userlearn :: Record(std::string sword)

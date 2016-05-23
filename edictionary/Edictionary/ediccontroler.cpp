@@ -157,6 +157,7 @@ bool ediccontroler::GetSentences(std::string vocabulary, std::vector<mysentences
 
 bool ediccontroler::GetTestInfo(std::vector<mywordrecord> testpaper, std::vector<mywordrecord> &testinfo)
 {
+    //MyLog mylog;
     bool flag;
     mywordrecord ret;
     for(auto i : testpaper)
@@ -176,20 +177,38 @@ bool ediccontroler::GetTestInfo(std::vector<mywordrecord> testpaper, std::vector
             testinfo.push_back(ret);
         }
     }
+    //mylog.print(testpaper);
     return 1;
 }
 
 bool ediccontroler::GetTextNewWorld(std::string origintext, std::vector<std::string> &wordlist)
 {
-    /*int len;
-    len = origintext.length();
+   // MyLog mylog;
+    //mylog.print("******");
+    std::string ret, word;
+    int len = origintext.length();
     int num1, num2;
     num1 = 0;
     for(int i = 0; i < len; i ++)
     {
-        if(num1)
+        //mylog.print(i);
+        if(origintext[i] != ' ' && origintext[i] != '\n' && (i == len - 1 || origintext[i + 1] == ' ' || origintext[i + 1] == '\n')){
+            word = origintext.substr(num1, i - num1 + 1);
+            if(word[num1] >= 'A')
+                word[num1] = word[num1] - 'A' + 'a';
+            for(auto j : Dictionary)
+            {
+                if(word == j.getVoca()){
+                    wordlist.push_back(word);
+                    break;
+                }
+            }
+        }
+        else if(origintext[i] == ' ' || origintext[i] == '\n'){
+            num1 = i + 1;
+        }
     }
-    //...获取文本生词*/
+    //获取文本生词
     return 1;
 }
 

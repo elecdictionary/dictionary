@@ -156,7 +156,10 @@ bool edicuser::TempSave(std::vector<mywordrecord> wordtest)
 
 bool edicuser::FinalSave(std::vector<mywordrecord> testinfo)
 {
+    MyLog mylog;
+    mylog.print(testinfo);
     userLearn->MakeRecord(testinfo);
+    userLearn->MakeWordInfo(testinfo);
     return 1;
 }
 
@@ -182,8 +185,10 @@ bool edicuser::GetSentences(std::string vocabulary, std::vector<mysentences> &se
 
 int edicuser::GetTempRecord(std::vector<mywordrecord> &temprecord)
 {
+    //MyLog mylog;
     int ret;
     ret = userLearn->GetTemp(temprecord);
+    //mylog.print(temprecord);
     return ret;
 }
 

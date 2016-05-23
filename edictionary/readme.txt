@@ -1,0 +1,1 @@
+该工程基于qt开发，未打包exe,运行需要qt。需要将words1.txt words2.txt wordtypes.txt放在运行根目录下。
