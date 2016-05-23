@@ -9,6 +9,7 @@ userlearn :: userlearn(std::string sname)
     //建立当天文件夹
     char *commend;
     commend = new char[100];*/
+    date = new char[50];
     std::time_t t = time(0);
     strftime(date, 20, "%Y/%m/%d", localtime(&t));
     /*strcpy(commend, "mkdir record\\");
@@ -25,10 +26,11 @@ void userlearn :: TempRecord(std::vector<mywordrecord> record)
     filename = Path("record", name, "record.tmp");
     std::ofstream fout(filename);
     fout << date << std::endl;
-    for (int i = 0; i < record.size(); i++)
+    for (int i = 0; i < record.size()-1; i++)
     {
         fout << record[i].Vocabulary << " " << record[i].Record << std::endl;
     }
+    fout << record[record.size()-1].Vocabulary << " " << record[record.size()-1].Record;
     fout.close();
 }
 
@@ -77,6 +79,7 @@ void userlearn :: GetNotRemembered(std::vector<std::string> &words)
     name = Convert(username);
     filename = Path("record", name, "last.info");
     std::ifstream fin(filename);
+    if (!fin) return;
     std::string word;
     int rec;
     while (!fin.eof())
@@ -156,13 +159,14 @@ void userlearn :: AddSentence(std::string sword, mysentences stc)
     strcat(word, ".txt");
     filename = Path("record", name, word);
     std::ofstream fout(filename, std::ios::app);
-    fout << stc.Chinese << std::endl;
     fout << stc.English << std::endl;
+    fout << stc.Chinese << std::endl;
     fout.close();
 }
 
 void userlearn :: Sentence(std::vector<mysentences> &allst, std::string sword)
 {
+    //MyLog mylog;
     char *filename, *name, *word;
     word = Convert(sword);
     name = Convert(username);
@@ -176,12 +180,13 @@ void userlearn :: Sentence(std::vector<mysentences> &allst, std::string sword)
     {
         stc = new mysentences;
         std::getline(st, stc->English);
-        stc->English[stc->English.length()-1] = '\0';
+        stc->English[stc->English.length()] = '\0';
         std::getline(st, stc->Chinese);
-        stc->Chinese[stc->Chinese.length()-1] = '\0';
+        stc->Chinese[stc->Chinese.length()] = '\0';
         allst.push_back(*stc);
         delete stc;
     }
+    //mylog.print(allst);
 }
 
 int userlearn :: WordRemembered()

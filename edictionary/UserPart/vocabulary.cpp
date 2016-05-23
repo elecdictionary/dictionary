@@ -5,29 +5,30 @@ vocabulary :: vocabulary () {}
 void vocabulary :: GetWords(std::vector<wordnote> &allwords)
 {
     std::string line;
-    std::ifstream fin("words.txt");
+    std::ifstream fin("words1.txt");
     std::string voca, pronun, cat, chinese;
-    char *commend, *cword;
+    //char *commend, *cword;
     wordnote *word;
-    while (getline(fin, line))
+
+    while (!fin.eof())
     {
+        getline(fin, line);
         int beg=0, pos = 0;
         word = new wordnote;
-        for (pos; pos < line.length(); pos++)
+        for (pos = 0; pos < line.length(); pos++)
             if (line[pos] == '[')
             {
                 voca.append(line, 0, pos);
 
-                cword = Convert(voca);
+                /*cword = Convert(voca);
                 commend = new char[100];
                 strcpy(commend, "mkdir words\\");
                 strcat(commend, cword);
                 system(commend);
                 delete commend;
-                delete cword;
+                delete cword;*/
 
                 word->setVoca(voca);
-                voca.clear();
                 beg = pos;
                 break;
             }
@@ -52,13 +53,72 @@ void vocabulary :: GetWords(std::vector<wordnote> &allwords)
         chinese.append(line, beg, line.length()-pos+1);
         word->setChinese(chinese);
         chinese.clear();
-        if (voca.length()>6)
-            word->setLev(2);
-            else
-                word->setLev(1);
+        word->setLev(1);
         allwords.push_back(*word);
+        voca.clear();
         delete word;
     }
+    fin.close();
+    fin.open("words2.txt");
+    while (!fin.eof())
+    {
+        getline(fin, line);
+        int beg=0, pos = 0;
+        word = new wordnote;
+        for (pos = 0; pos < line.length(); pos++)
+            if (line[pos] == '[')
+            {
+                voca.append(line, 0, pos);
+                word->setVoca(voca);
+                beg = pos;
+                break;
+            }
+        for (pos; pos < line.length(); pos++)
+            if (line[pos] == ']')
+            {
+                pronun.append(line, beg, pos-beg+1);
+                word->setPronun(pronun);
+                pronun.clear();
+                beg = pos + 1;
+                break;
+            }
+        for (pos = beg; pos < line.length(); pos++)
+            if (line[pos] == '.')
+            {
+                cat.append(line, beg, pos-beg+1);
+                word->setCat(cat);
+                cat.clear();
+                beg = pos + 1;
+                break;
+            }
+        chinese.append(line, beg, line.length()-pos+1);
+        word->setChinese(chinese);
+        chinese.clear();
+        word->setLev(2);
+        allwords.push_back(*word);
+        voca.clear();
+        delete word;
+    }
+    fin.close();
+    word = NULL;
+}
+
+void vocabulary :: GetWordTypes(std::vector<wordnote> &alltypes)
+{
+    std::ifstream fin("wordtypes.txt");
+    std::string voca, chinese;
+    wordnote *word;
+
+    while (!fin.eof())
+    {
+        fin >> voca >> chinese;
+        word = new wordnote;
+        word->setVoca(voca);
+        word->setChinese(chinese);
+        alltypes.push_back(*word);
+        delete word;
+    }
+    fin.close();
     word = NULL;
 }
 

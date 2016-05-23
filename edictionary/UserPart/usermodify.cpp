@@ -19,7 +19,7 @@ int usermodify :: ShowLevel()
 int usermodify :: ShowNum()
 {
     char* filename;
-    filename = Path("users", username, "num.info");
+    filename = Path("users", username, "number.info");
     std::ifstream file(filename);
     int num;
     file >> num;

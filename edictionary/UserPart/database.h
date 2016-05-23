@@ -2,6 +2,7 @@
 #define DATABASE_H
 
 #include "allstruct.h"
+#include "mylog.h"
 #include <vector>
 #include <cstdlib>
 #include <iostream>
