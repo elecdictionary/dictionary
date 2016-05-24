@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>35.jpg</file>
+        <file>56a88450e6cee裁剪.jpg</file>
+        <file>56a88450e6cee.jpg</file>
+        <file>按钮鹅黄.png</file>
+        <file>按钮奶白.jpg</file>
+        <file>1110055232e8da9079o.jpg</file>
+        <file>20160521112419_Yf3XJ.jpeg</file>
+        <file>20160521112356_nhKTJ.jpeg</file>
+        <file>20160521112545_swUKd.jpeg</file>
+        <file>20160521112557_vKfVx.jpeg</file>
+        <file>3155be0c88e3fdf.jpg</file>
+        <file>174913x6p736577dx6zf3t.jpg</file>
+        <file>20151023094715_nai8P.jpeg</file>
+    </qresource>
+</RCC>

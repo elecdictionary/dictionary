@@ -72,3 +72,6 @@ FORMS    += mainwindow.ui \
     textwordinfowindow.ui
 
 CONFIG    += c++11
+
+RESOURCES += \
+    picture.qrc

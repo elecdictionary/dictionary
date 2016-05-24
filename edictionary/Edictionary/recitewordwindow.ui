@@ -9,39 +9,52 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>750</width>
-    <height>399</height>
+    <width>880</width>
+    <height>499</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>750</width>
-    <height>399</height>
+    <width>880</width>
+    <height>499</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>750</width>
-    <height>399</height>
+    <width>880</width>
+    <height>499</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>黑体</family>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SimpleDictionary~\(≧▽≦)/~</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/new/prefix1/3155be0c88e3fdf.jpg);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>黑体</family>
+    </font>
+   </property>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>20</y>
+      <x>340</x>
+      <y>50</y>
       <width>91</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Agency FB</family>
-      <pointsize>16</pointsize>
+      <family>黑体</family>
+      <pointsize>18</pointsize>
      </font>
     </property>
     <property name="text">
@@ -54,8 +67,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>270</y>
+      <x>730</x>
+      <y>390</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -70,16 +83,16 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>130</y>
-      <width>321</width>
-      <height>71</height>
+      <x>440</x>
+      <y>150</y>
+      <width>381</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
-      <pointsize>24</pointsize>
+      <family>Agency FB</family>
+      <pointsize>22</pointsize>
      </font>
     </property>
     <property name="readOnly">
@@ -89,8 +102,8 @@
    <widget class="QPushButton" name="rememberButton">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>270</y>
+      <x>450</x>
+      <y>390</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -102,8 +115,8 @@
    <widget class="QPushButton" name="forgetButton">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>270</y>
+      <x>590</x>
+      <y>390</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -118,8 +131,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>40</y>
+      <x>720</x>
+      <y>60</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -147,16 +160,6 @@
      <string>TextLabel</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>750</width>
-     <height>23</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

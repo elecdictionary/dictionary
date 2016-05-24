@@ -213,7 +213,10 @@ bool ediccontroler::GetTextNewWorld(std::string origintext, std::vector<std::str
         }
     }
     //获取文本生词
-    return 1;
+    if (wordlist.size())
+        return 1;
+        else
+            return 0;
 }
 
 void ediccontroler::Init()
