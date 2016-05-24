@@ -128,7 +128,7 @@ because 0
 become 0
 bed 0
 bedroom 0
-beer 0
+beer 1
 before 0
 beg 0
 begin 0
@@ -389,7 +389,7 @@ divide 0
 do 0
 doctor 0
 dollar 0
-door 0
+door 1
 double 0
 doubt 0
 down 0
@@ -401,7 +401,7 @@ drive 0
 drop 0
 dry 0
 due 0
-during 0
+during 1
 dust 0
 duty 0
 each 0
@@ -495,7 +495,7 @@ false 0
 familiar 0
 family 0
 famous 0
-far 0
+far 1
 fat 0
 fate 0
 father 0
@@ -564,7 +564,7 @@ freeze 0
 French 0
 frequent 0
 fresh 0
-Friday 0
+Friday 1
 friend 0
 friendly 0
 friendship 0
@@ -631,7 +631,7 @@ guide 1
 gun 0
 habit 0
 hair 0
-half 0
+half 1
 hall 0
 hand 0
 handsome 0
@@ -658,7 +658,7 @@ heavy 0
 height 0
 hello 0
 help 0
-her 0
+her 1
 here 0
 hero 0
 hers 0
@@ -696,7 +696,7 @@ hundred 0
 hungry 0
 hunt 0
 hurry 0
-hurt 0
+hurt 1
 husband 0
 I 0
 ice 0
@@ -880,7 +880,7 @@ mind 0
 mine 0
 minister 0
 minute 0
-mirror 0
+mirror 1
 Miss 0
 missing 0
 mistake 0
@@ -1029,7 +1029,7 @@ piano 0
 pick 0
 picture 0
 piece 0
-pile 0
+pile 1
 pity 0
 place 0
 plain 0
@@ -1223,7 +1223,7 @@ sew 0
 sex 0
 shadow 0
 shake 0
-shall 0
+shall 1
 shame 0
 shape 0
 share 0
@@ -1338,7 +1338,7 @@ stay 0
 steal 0
 steam 0
 steel 0
-step 0
+step 1
 stick 0
 still 0
 stomach 0
@@ -2540,7 +2540,7 @@ cigar 0
 cigarette 0
 circular 0
 circuit 0
-circulate 0
+circulate 1
 circulation 0
 circumference 0
 circumstance 0
@@ -4066,7 +4066,7 @@ fundamental 0
 funeral 0
 fur 0
 furious 0
-furnace 0
+furnace 1
 furnish 0
 furrow 0
 fury 0
@@ -4125,7 +4125,7 @@ giver 0
 glare 0
 glassware 0
 gleam 0
-glide 0
+glide 1
 glimpse 0
 glisten 0
 glitter 0
@@ -5765,7 +5765,7 @@ perfectly 0
 perform 0
 performance 0
 performer 0
-perfume 0
+perfume 1
 peril 0
 perimeter 0
 periodic 0
@@ -7362,11 +7362,11 @@ textbook 0
 textile 0
 textual 0
 thankful 0
-thanks 0
+thanks 1
 theatrical 0
 theft 0
 theme 0
-theoretical 0
+theoretical 1
 thereafter 0
 thereby 0
 therefore 0
@@ -11720,7 +11720,7 @@ mortify 0
 mortuary 0
 mosaic 0
 mote 0
-motif 0
+motif 1
 motility 0
 motivational 0
 motley 0
@@ -14312,4 +14312,5 @@ zenith 0
 zephyr 0
 zest 0
 zigzag 0
+-1163005939 -1163005939
  -1163005939

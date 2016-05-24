@@ -157,13 +157,13 @@ bool ediccontroler::GetSentences(std::string vocabulary, std::vector<mysentences
 
 bool ediccontroler::GetTestInfo(std::vector<mywordrecord> testpaper, std::vector<mywordrecord> &testinfo)
 {
-    //MyLog mylog;
+    MyLog mylog;
     bool flag;
     mywordrecord ret;
     for(auto i : testpaper)
     {
         flag = 0;
-        for(auto j : testinfo)
+        for(auto &j : testinfo)
         {
             if(j.Vocabulary == i.Vocabulary){
                 flag = 1;
@@ -177,7 +177,8 @@ bool ediccontroler::GetTestInfo(std::vector<mywordrecord> testpaper, std::vector
             testinfo.push_back(ret);
         }
     }
-    //mylog.print(testpaper);
+    mylog.print(testpaper);
+    mylog.print(testinfo);
     return 1;
 }
 

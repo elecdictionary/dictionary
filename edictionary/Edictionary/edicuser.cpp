@@ -156,8 +156,8 @@ bool edicuser::TempSave(std::vector<mywordrecord> wordtest)
 
 bool edicuser::FinalSave(std::vector<mywordrecord> testinfo)
 {
-    MyLog mylog;
-    mylog.print(testinfo);
+    //MyLog mylog;
+    //mylog.print(testinfo);
     userLearn->MakeRecord(testinfo);
     userLearn->MakeWordInfo(testinfo);
     return 1;
