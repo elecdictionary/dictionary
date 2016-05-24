@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QShowEvent>
 #include "ediccontroler.h"
 #include "adjustwindow.h"
 #include "searchwordwindow.h"
@@ -20,6 +21,9 @@ class MenuWindow : public QMainWindow
 {
     Q_OBJECT
     ediccontroler *Ediccon;
+
+protected:
+    void showEvent(QShowEvent *evt);
 
 public:
     explicit MenuWindow(ediccontroler *Edic, QWidget *parent = 0);

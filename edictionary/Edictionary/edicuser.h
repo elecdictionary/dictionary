@@ -37,13 +37,14 @@ public:
     edicuser();
     ~edicuser();
 
-    int getWordnum() const;
+    int getWordnum();
     int getStranum();
     void setStranum(int value);
     int getStralev();
     void setStralev(int value);
     std::string getUsername() const;//only can be got(no setting) by other object
     int getStatus() const;
+    //以上内容均为实时获取
 };
 
 #endif // EDICUSER_H

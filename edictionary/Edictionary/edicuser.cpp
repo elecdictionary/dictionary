@@ -1,8 +1,11 @@
 #include "edicuser.h"
 
 
-int edicuser::getWordnum() const
+int edicuser::getWordnum()
 {
+    if(!status)
+        return -1;
+     wordnum = userLearn->WordRemembered();
     return wordnum;
 }
 
@@ -93,6 +96,7 @@ void edicuser::Init()
     userLearn = new userlearn(username);
     stralev = userModify->ShowLevel();
     stranum = userModify->ShowNum();
+    wordnum = userLearn->WordRemembered();
     //mylog.print(userModify->ShowLevel());
     //mylog.print(userModify->ShowNum());
     //...读取已背单词数

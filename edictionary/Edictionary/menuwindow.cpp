@@ -1,12 +1,19 @@
 #include "menuwindow.h"
 #include "ui_menuwindow.h"
 
+void MenuWindow::showEvent(QShowEvent *evt)
+{
+    ui->wordnumLabel->setText("您已记住" + QString::number(Ediccon->User->getWordnum()) + "个单词");
+}
+
 MenuWindow::MenuWindow(ediccontroler *Edic, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MenuWindow)
 {
     Ediccon = Edic;
     ui->setupUi(this);
+
+    ui->usernameLabel->setText(QString::fromStdString(Ediccon->User->getUsername()) + "您好");
 }
 
 MenuWindow::~MenuWindow()
