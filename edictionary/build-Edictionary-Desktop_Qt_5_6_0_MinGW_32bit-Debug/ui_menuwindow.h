@@ -41,7 +41,9 @@ public:
     {
         if (MenuWindow->objectName().isEmpty())
             MenuWindow->setObjectName(QStringLiteral("MenuWindow"));
-        MenuWindow->resize(750, 400);
+        MenuWindow->resize(750, 399);
+        MenuWindow->setMinimumSize(QSize(750, 399));
+        MenuWindow->setMaximumSize(QSize(750, 399));
         centralwidget = new QWidget(MenuWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         settingButton = new QPushButton(centralwidget);
