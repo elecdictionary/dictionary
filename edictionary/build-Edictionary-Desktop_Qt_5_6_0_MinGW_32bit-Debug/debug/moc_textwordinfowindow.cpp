@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_TextWordinfoWindow_t {
     QByteArrayData data[6];
-    char stringdata0[118];
+    char stringdata0[122];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,12 +34,12 @@ QT_MOC_LITERAL(1, 19, 29), // "on_addsentencesButton_clicked"
 QT_MOC_LITERAL(2, 49, 0), // ""
 QT_MOC_LITERAL(3, 50, 23), // "on_returnButton_clicked"
 QT_MOC_LITERAL(4, 74, 21), // "on_nextButton_clicked"
-QT_MOC_LITERAL(5, 96, 21) // "on_pushButton_clicked"
+QT_MOC_LITERAL(5, 96, 25) // "on_previousButton_clicked"
 
     },
     "TextWordinfoWindow\0on_addsentencesButton_clicked\0"
     "\0on_returnButton_clicked\0on_nextButton_clicked\0"
-    "on_pushButton_clicked"
+    "on_previousButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -80,7 +80,7 @@ void TextWordinfoWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 0: _t->on_addsentencesButton_clicked(); break;
         case 1: _t->on_returnButton_clicked(); break;
         case 2: _t->on_nextButton_clicked(); break;
-        case 3: _t->on_pushButton_clicked(); break;
+        case 3: _t->on_previousButton_clicked(); break;
         default: ;
         }
     }

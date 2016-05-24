@@ -52,8 +52,9 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         wordlineEdit = new QLineEdit(centralwidget);
         wordlineEdit->setObjectName(QStringLiteral("wordlineEdit"));
-        wordlineEdit->setEnabled(false);
+        wordlineEdit->setEnabled(true);
         wordlineEdit->setGeometry(QRect(230, 70, 141, 21));
+        wordlineEdit->setReadOnly(true);
         addsentencesButton = new QPushButton(centralwidget);
         addsentencesButton->setObjectName(QStringLiteral("addsentencesButton"));
         addsentencesButton->setGeometry(QRect(640, 240, 61, 31));
@@ -62,8 +63,9 @@ public:
         label_4->setGeometry(QRect(150, 100, 54, 12));
         sentencesEdit = new QTextEdit(centralwidget);
         sentencesEdit->setObjectName(QStringLiteral("sentencesEdit"));
-        sentencesEdit->setEnabled(false);
+        sentencesEdit->setEnabled(true);
         sentencesEdit->setGeometry(QRect(150, 180, 391, 131));
+        sentencesEdit->setReadOnly(true);
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(330, 10, 91, 41));
@@ -76,13 +78,13 @@ public:
         label_3->setGeometry(QRect(150, 160, 54, 12));
         wordinfoEdit = new QTextEdit(centralwidget);
         wordinfoEdit->setObjectName(QStringLiteral("wordinfoEdit"));
-        wordinfoEdit->setEnabled(false);
+        wordinfoEdit->setEnabled(true);
         wordinfoEdit->setGeometry(QRect(150, 120, 391, 31));
         QFont font1;
         font1.setFamily(QStringLiteral("Agency FB"));
         font1.setPointSize(11);
         wordinfoEdit->setFont(font1);
-        wordinfoEdit->setReadOnly(false);
+        wordinfoEdit->setReadOnly(true);
         returnButton = new QPushButton(centralwidget);
         returnButton->setObjectName(QStringLiteral("returnButton"));
         returnButton->setGeometry(QRect(640, 290, 51, 31));

@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <string>
 #include <vector>
+#include <QShowEvent>
 #include "ediccontroler.h"
 #include "addsentenceswindow.h"
 
@@ -19,6 +20,9 @@ class TextWordinfoWindow : public QMainWindow
     std::vector<std::string> Wordlist;
     int num;
 
+protected:
+    void showEvent(QShowEvent *evt);
+
 public:
     explicit TextWordinfoWindow(std::vector<std::string> *wordlist, ediccontroler *Edic, QWidget *parent = 0);
     ~TextWordinfoWindow();
@@ -30,7 +34,7 @@ private slots:
 
     void on_nextButton_clicked();
 
-    void on_pushButton_clicked();
+    void on_previousButton_clicked();
 
 private:
     Ui::TextWordinfoWindow *ui;

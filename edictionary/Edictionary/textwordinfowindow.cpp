@@ -1,6 +1,11 @@
 #include "textwordinfowindow.h"
 #include "ui_textwordinfowindow.h"
 
+void TextWordinfoWindow::showEvent(QShowEvent *evt)
+{
+
+}
+
 TextWordinfoWindow::TextWordinfoWindow(std::vector<std::string> *wordlist, ediccontroler *Edic, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::TextWordinfoWindow)
@@ -26,6 +31,7 @@ TextWordinfoWindow::TextWordinfoWindow(std::vector<std::string> *wordlist, edicc
         allSentences += (*it).English + "\n" + (*it).Chinese + "\n";
     }
     ui->sentencesEdit->setPlainText(QString::fromStdString(allSentences));
+    ui->numLabel->setText("1/" + QString::number(Wordlist.size()));
     //写入单词信息
 }
 
@@ -60,6 +66,7 @@ void TextWordinfoWindow::on_nextButton_clicked()
         num --;
     }
     else{
+        ui->numLabel->setText(QString::number(num + 1) + "/" + QString::number(Wordlist.size()));
         ui->wordlineEdit->setText(QString::fromStdString(Wordlist[num]));
         int ret;
         std::string word;
@@ -80,7 +87,7 @@ void TextWordinfoWindow::on_nextButton_clicked()
     }
 }
 
-void TextWordinfoWindow::on_pushButton_clicked()
+void TextWordinfoWindow::on_previousButton_clicked()
 {
     num --;
     if(num < 0){
@@ -92,6 +99,7 @@ void TextWordinfoWindow::on_pushButton_clicked()
         num ++;
     }
     else{
+        ui->numLabel->setText(QString::number(num + 1) + "/" + QString::number(Wordlist.size()));
         ui->wordlineEdit->setText(QString::fromStdString(Wordlist[num]));
         int ret;
         std::string word;

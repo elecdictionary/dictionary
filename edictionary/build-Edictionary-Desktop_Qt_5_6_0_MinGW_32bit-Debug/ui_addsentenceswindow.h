@@ -53,6 +53,8 @@ public:
         AddsentencesWindow->setSizePolicy(sizePolicy);
         AddsentencesWindow->setMinimumSize(QSize(750, 399));
         AddsentencesWindow->setMaximumSize(QSize(750, 399));
+        AddsentencesWindow->setFocusPolicy(Qt::NoFocus);
+        AddsentencesWindow->setDocumentMode(false);
         centralwidget = new QWidget(AddsentencesWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         returnButton = new QPushButton(centralwidget);
@@ -65,6 +67,7 @@ public:
         csentenceEdit->setObjectName(QStringLiteral("csentenceEdit"));
         csentenceEdit->setEnabled(true);
         csentenceEdit->setGeometry(QRect(180, 250, 381, 91));
+        csentenceEdit->setReadOnly(false);
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(180, 115, 54, 12));

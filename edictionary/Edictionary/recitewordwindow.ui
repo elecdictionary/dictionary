@@ -66,7 +66,7 @@
    </widget>
    <widget class="QLineEdit" name="wordEdit">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -78,9 +78,12 @@
     </property>
     <property name="font">
      <font>
-      <family>Agency FB</family>
-      <pointsize>22</pointsize>
+      <family>Arial</family>
+      <pointsize>24</pointsize>
      </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="rememberButton">
@@ -123,6 +126,25 @@
     </property>
     <property name="text">
      <string>上传背单词数据</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="numLabel">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>30</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>

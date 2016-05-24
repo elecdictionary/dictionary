@@ -66,8 +66,9 @@ public:
         label_2->setFont(font);
         sentencesEdit = new QTextEdit(centralwidget);
         sentencesEdit->setObjectName(QStringLiteral("sentencesEdit"));
-        sentencesEdit->setEnabled(false);
+        sentencesEdit->setEnabled(true);
         sentencesEdit->setGeometry(QRect(170, 200, 391, 131));
+        sentencesEdit->setReadOnly(true);
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(170, 180, 54, 12));
@@ -76,13 +77,13 @@ public:
         label_4->setGeometry(QRect(170, 120, 54, 12));
         wordinfoEdit = new QTextEdit(centralwidget);
         wordinfoEdit->setObjectName(QStringLiteral("wordinfoEdit"));
-        wordinfoEdit->setEnabled(false);
+        wordinfoEdit->setEnabled(true);
         wordinfoEdit->setGeometry(QRect(170, 140, 391, 31));
         QFont font1;
         font1.setFamily(QStringLiteral("Agency FB"));
         font1.setPointSize(11);
         wordinfoEdit->setFont(font1);
-        wordinfoEdit->setReadOnly(false);
+        wordinfoEdit->setReadOnly(true);
         searchButton = new QPushButton(centralwidget);
         searchButton->setObjectName(QStringLiteral("searchButton"));
         searchButton->setGeometry(QRect(470, 80, 43, 27));

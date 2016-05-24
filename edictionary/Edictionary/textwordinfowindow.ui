@@ -73,7 +73,7 @@
    </widget>
    <widget class="QTextEdit" name="sentencesEdit">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -83,10 +83,13 @@
       <height>131</height>
      </rect>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLineEdit" name="wordlineEdit">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -95,6 +98,9 @@
       <width>141</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="returnButton">
@@ -125,7 +131,7 @@
    </widget>
    <widget class="QTextEdit" name="wordinfoEdit">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -145,7 +151,7 @@
      <string/>
     </property>
     <property name="readOnly">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="placeholderText">
      <string/>
@@ -177,7 +183,7 @@
      <string>下一个</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="priviousButton">
     <property name="geometry">
      <rect>
       <x>660</x>
@@ -188,6 +194,25 @@
     </property>
     <property name="text">
      <string>上一个</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="numLabel">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>

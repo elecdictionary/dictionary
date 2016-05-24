@@ -622,7 +622,6 @@ boldness['bәuldnis]n.胆略
 bolt[bәult]n. 插销;螺栓;闪电;快跑;逃走; v. (马)等脱缰逃跑;囫囵吞下;拴紧
 bomb[bɔm]n. 炸弹v. 投弹于，轰炸
 bomber['bɔmә]n.轰炸机
-bona fide[]adj.真诚的，无欺的
 bond[bɔnd]n. 契约;结合;债券
 bonded['bɔndid]adj.保税的
 bony['bәuni]adj.骨头的
@@ -3430,7 +3429,6 @@ luggage['lʌgidʒ]n. 行李，皮箱
 lumber['lʌmbә]n. 木材，木料
 luminous['lju:minәs]a.发光的；光明的
 lump[lʌmp]n. 团,块,肿块;vt. 合在一起,结块
-lump sum[]n.总数
 lunar['lju:nә]a. 月的,似月的
 luncheon['lʌntʃәn]n.午宴，午餐，便宴
 lung[lʌŋ]n. 肺
@@ -3509,7 +3507,6 @@ mask[ma:sk]n. 面具,口罩;vt. 遮蔽,伪装
 massacre['mæsәkә]n./vt. 大屠杀,残杀
 massage['mæsɑ:ʒ]n.按摩，推拿
 massive['mæsiv]a. 大而重的;大量的,大规模的
-mass media[]n.传媒工具，新闻界
 mast[ma:st]n.桅杆；杆vt.扯帆
 masterpiece['ma:stәpi:s]n. 杰作，名著
 mat[mæt]n. 席子，垫子
@@ -5009,7 +5006,6 @@ sampling['sæmpliŋ]n.抽样
 sandwich['sænwidʒ]n. 三明治，夹肉面包v. 夹入，挤进
 sandy['sændi]n.沙的，含沙的
 sanitary['sænitәri]a. 有关卫生的;清洁的
-Santa Claus[sæntә'klɔ:z]n.圣诞老人
 sarcasm['sa:kæzәm]n. 讽刺,挖苦,嘲笑
 sarcastic[sa:'kæstik]a. 讽刺的
 sardine[sa:'di:n]n.沙丁鱼
@@ -5353,7 +5349,6 @@ sow[sәu]v. 播种
 soy[sɔi]n.酱油；大豆，黄豆
 spacecraft['speiskra:ft]n. 宇宙飞船
 spaceship['speisʃip]n. 宇宙飞船
-space shuttle[]n.航天飞机
 spacious['speiʃәs]a. 广阔的,宽敞的
 spade[speid]n. 铁锹，铲子
 Spain[spein]n.西班牙
@@ -5756,7 +5751,6 @@ textile['tekstail]n. 纺织品a. 纺织的
 textual['tekstʃuәl]adj.课文的，正文的
 thankful['θæŋkful]adj.感谢的，欣慰的
 thanks[θæŋks]n.感谢 int.谢谢
-Thanksgiving Day[]n.感恩节
 theatrical[θi'ætrikәl]adj.戏剧的
 theft[θeft]n. 偷盗
 theme[θi:m]n. 题目,主题
@@ -6026,9 +6020,6 @@ uniformly['ju:nifɔ:mli]ad.相同地；一贯
 uninterested[ʌn'intәristid]adj.不感兴趣的
 unique[ju:'ni:k]a. 惟一的,独一无二的
 unit['ju:nit]n. 单位，单元；部件，元件；机组，装置
-united kingdom[ju:'naitid' kiŋdәm]n.英国，联合王国
-united nations[ju:'naitid' neiʃәnz]n.联合国
-united states[ju:'naitid'steits]n.美国，合众国
 unity['ju:niti]n. 团结；统一，一致，整体
 universal[ju:ni'vә:sәl]a. 普遍的,全体的,全球的
 universally[ju:ni'vә:sәli]ad.普遍地，一般地
@@ -6776,7 +6767,6 @@ attest[ә'test](to)v.证明
 attire[ә'taiә]v.穿着,装饰；n.好衣服
 attrition[ә'triʃәn]n.消磨,磨损
 attune[ә'tju:n](to)v.使调和
-attune (to)[ә'tju:n]v.调音; 使合调; 使相合
 atypical['eitipikәl]adj.非典型的
 audacious[ɔ:'deiʃәs]adj.大胆的,愚勇的
 audacity[ɔ:'dæsiti]n.大胆,鲁莽
@@ -7289,7 +7279,7 @@ cleaver['kli:vә]n.切肉刀(knives used by butchers)
 cleft[kleft]n.裂缝;adj.劈开的
 clemency['klemәnsi]n.温和；仁慈，宽厚
 clement['klemәnt]adj.仁慈的；温和的
-clich��[kli:'ʃei]n.陈词滥调
+cliche[kli:'ʃei]n.陈词滥调
 clinch[klintʃ]v.钉牢；彻底解决
 clinical['klinikәl]adj.临床的;冷静客观的
 clipper['klipә]n.大剪刀;快速帆船
@@ -8666,7 +8656,6 @@ folklore['fәuklɔ:]n.民间传说；民俗学
 folly['fɔli]n.愚蠢;愚蠢的行为,思想或做法
 foment[fәu'ment]v.煽动,助长(坏事)
 fondle['fɔndl]v.抚弄,抚摸
-fool's errand[]徒劳无益的差事
 foolhardy['fu:lhɑ:di]adj.鲁莽的,有勇无谋的
 foolproof['fu:lpru:f]adj.简易而不会误用的,容易懂的
 foothold['futhәuld]n.立足点,根据地
@@ -9642,7 +9631,6 @@ jeopardy['dʒepәdi]n.危险
 jest[dʒest]v./n.说笑,玩笑
 jesting['dʒestiˌ]adj.滑稽的;爱开玩笑的
 jibe[dʒaib]v.与...一致,符合
-jigsaw puzzle['dʒigsɔ: 'pʌzl]n.拼图游戏
 jigsawpuzzle['dʒigsɔ:'pʌzl]n.拼图游戏
 jingoism['dʒiˌgәuizәm]n.沙文主义;侵略主义
 jingoist['dʒiˌgәuist]n.侵略主义者
@@ -10318,8 +10306,8 @@ odoriferous[ˌәudә'rifәrәs]adj.有气味的
 odyssey['ɔdisi]n.长途的冒险旅行
 off-key['ɔ:fki:]adj.走调的,不和谐的
 offbeat[ɔf'bi:t]adj.不规则的,不平常的
-offence(offense)[ә'fens]n.得罪；错事
-offense[ә'fens]n.得罪,错事(/offence)
+offence[ә'fens]n.得罪；错事
+offense[ә'fens]n.得罪,错事
 offhand[ˌɔ:f'hænd]adv./adj.随便(的)
 officious[ә'fiʃәs]adj.爱发命令的,好忠告的
 offish['ɔfiʃ]adj.冷淡的
@@ -10965,7 +10953,7 @@ prudish['pru:diʃ]adj.过分守礼的,假道学的
 prune[pru:n]n.梅干;v.修剪
 prurient['pruәriәnt]adj.好色的,淫乱的
 pry[prai]v.刺探；撬开
-pr��cis['preisi:]n.摘要,大纲
+precis['preisi:]n.摘要,大纲
 psalm[sɑ:m]n.赞美诗,圣诗
 psephology[se'fɔlәdʒi]n.选举学
 pseudonym['sju:dәnim]n.假名,笔名
@@ -11273,7 +11261,7 @@ resilience[ri'ziliәns]n.弹性,弹力
 resilient[ri'ziliәnt]adj.有弹性的;能恢复活力的,适应力强的
 resin['rezin]n.树脂
 resonant['rezәnәnt]adj.(声音)洪亮的；共鸣的
-resort (to)[ri'zɔ:t]v.求助于
+resort[ri'zɔ:t]v.求助于
 resound[ri'zaund]v.回荡着声音;鸣响
 resourceful[ri'sɔ:sfәl]adj.机智的
 respiration[ˌrespә'reiʃәn]n.呼吸

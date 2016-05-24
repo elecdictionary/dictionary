@@ -69,7 +69,6 @@ void AddsentencesWindow::on_addsentencesButton_clicked()
         box->setWindowTitle("提示");
         box->setText("添加例句成功");
         box->show();
-        ui->wordlineEdit->setText("");
         ui->esentenceEdit->setPlainText("");
         ui->csentenceEdit->setPlainText("");
     }

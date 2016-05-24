@@ -19,6 +19,7 @@ void RecitewordWindow::showEvent(QShowEvent *evt)
         //...如何找到上一个窗口
     }
     else{
+        ui->numLabel->setText(QString::number(num + 1) + "/" + QString::number(Testpaper.size()));
         ui->wordEdit->setText(QString::fromStdString(Testpaper[num].Vocabulary));
     }
 }

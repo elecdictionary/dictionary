@@ -157,7 +157,7 @@ bool ediccontroler::GetSentences(std::string vocabulary, std::vector<mysentences
 
 bool ediccontroler::GetTestInfo(std::vector<mywordrecord> testpaper, std::vector<mywordrecord> &testinfo)
 {
-    MyLog mylog;
+    //MyLog mylog;
     bool flag;
     mywordrecord ret;
     for(auto i : testpaper)
@@ -177,14 +177,14 @@ bool ediccontroler::GetTestInfo(std::vector<mywordrecord> testpaper, std::vector
             testinfo.push_back(ret);
         }
     }
-    mylog.print(testpaper);
-    mylog.print(testinfo);
+    //mylog.print(testpaper);
+    //mylog.print(testinfo);
     return 1;
 }
 
 bool ediccontroler::GetTextNewWorld(std::string origintext, std::vector<std::string> &wordlist)
 {
-   // MyLog mylog;
+    MyLog mylog;
     //mylog.print("******");
     std::string ret, word;
     int len = origintext.length();
@@ -193,19 +193,22 @@ bool ediccontroler::GetTextNewWorld(std::string origintext, std::vector<std::str
     for(int i = 0; i < len; i ++)
     {
         //mylog.print(i);
-        if(origintext[i] != ' ' && origintext[i] != '\n' && (i == len - 1 || origintext[i + 1] == ' ' || origintext[i + 1] == '\n')){
+        if(((origintext[i] >= 'A' && origintext[i] <= 'Z') || (origintext[i] >= 'a' && origintext[i] <= 'z')) && (i == len - 1 || !((origintext[i + 1] >= 'A' && origintext[i + 1] <= 'Z') || (origintext[i + 1] >= 'a' && origintext[i + 1] <= 'z')))){
             word = origintext.substr(num1, i - num1 + 1);
-            if(word[num1] >= 'A')
-                word[num1] = word[num1] - 'A' + 'a';
+            mylog.print(word);
+            if(word[0] >= 'A' && word[0] <= 'Z')
+                word[0] = word[0] - 'A' + 'a';
             for(auto j : Dictionary)
             {
                 if(word == j.getVoca()){
-                    wordlist.push_back(word);
-                    break;
+                    if(!User->CheckRecited(word)){
+                        wordlist.push_back(word);
+                        break;
+                    }
                 }
             }
         }
-        else if(origintext[i] == ' ' || origintext[i] == '\n'){
+        else if(!((origintext[i] >= 'A' && origintext[i] <= 'Z') || (origintext[i] >= 'a' && origintext[i] <= 'z'))){
             num1 = i + 1;
         }
     }

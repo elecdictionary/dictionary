@@ -39,7 +39,8 @@ public:
     QTextEdit *wordinfoEdit;
     QLabel *label;
     QPushButton *nextButton;
-    QPushButton *pushButton;
+    QPushButton *priviousButton;
+    QLabel *numLabel;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -67,12 +68,14 @@ public:
         label_4->setGeometry(QRect(170, 110, 54, 12));
         sentencesEdit = new QTextEdit(centralwidget);
         sentencesEdit->setObjectName(QStringLiteral("sentencesEdit"));
-        sentencesEdit->setEnabled(false);
+        sentencesEdit->setEnabled(true);
         sentencesEdit->setGeometry(QRect(170, 190, 391, 131));
+        sentencesEdit->setReadOnly(true);
         wordlineEdit = new QLineEdit(centralwidget);
         wordlineEdit->setObjectName(QStringLiteral("wordlineEdit"));
-        wordlineEdit->setEnabled(false);
+        wordlineEdit->setEnabled(true);
         wordlineEdit->setGeometry(QRect(250, 80, 141, 21));
+        wordlineEdit->setReadOnly(true);
         returnButton = new QPushButton(centralwidget);
         returnButton->setObjectName(QStringLiteral("returnButton"));
         returnButton->setGeometry(QRect(660, 320, 51, 31));
@@ -81,22 +84,29 @@ public:
         addsentencesButton->setGeometry(QRect(660, 200, 61, 31));
         wordinfoEdit = new QTextEdit(centralwidget);
         wordinfoEdit->setObjectName(QStringLiteral("wordinfoEdit"));
-        wordinfoEdit->setEnabled(false);
+        wordinfoEdit->setEnabled(true);
         wordinfoEdit->setGeometry(QRect(170, 130, 391, 31));
         QFont font1;
         font1.setFamily(QStringLiteral("Agency FB"));
         font1.setPointSize(11);
         wordinfoEdit->setFont(font1);
-        wordinfoEdit->setReadOnly(false);
+        wordinfoEdit->setReadOnly(true);
         label = new QLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(170, 70, 81, 31));
         nextButton = new QPushButton(centralwidget);
         nextButton->setObjectName(QStringLiteral("nextButton"));
         nextButton->setGeometry(QRect(660, 280, 51, 31));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(660, 242, 51, 31));
+        priviousButton = new QPushButton(centralwidget);
+        priviousButton->setObjectName(QStringLiteral("priviousButton"));
+        priviousButton->setGeometry(QRect(660, 242, 51, 31));
+        numLabel = new QLabel(centralwidget);
+        numLabel->setObjectName(QStringLiteral("numLabel"));
+        numLabel->setGeometry(QRect(60, 30, 81, 41));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Arial"));
+        font2.setPointSize(12);
+        numLabel->setFont(font2);
         TextWordinfoWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(TextWordinfoWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -123,7 +133,8 @@ public:
         wordinfoEdit->setPlaceholderText(QString());
         label->setText(QApplication::translate("TextWordinfoWindow", "\345\215\225\350\257\215\357\274\232", 0));
         nextButton->setText(QApplication::translate("TextWordinfoWindow", "\344\270\213\344\270\200\344\270\252", 0));
-        pushButton->setText(QApplication::translate("TextWordinfoWindow", "\344\270\212\344\270\200\344\270\252", 0));
+        priviousButton->setText(QApplication::translate("TextWordinfoWindow", "\344\270\212\344\270\200\344\270\252", 0));
+        numLabel->setText(QApplication::translate("TextWordinfoWindow", "TextLabel", 0));
     } // retranslateUi
 
 };

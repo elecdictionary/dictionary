@@ -28,7 +28,7 @@
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="wordlineEdit">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -37,6 +37,9 @@
       <width>141</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="addsentencesButton">
@@ -67,7 +70,7 @@
    </widget>
    <widget class="QTextEdit" name="sentencesEdit">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -76,6 +79,9 @@
       <width>391</width>
       <height>131</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -112,7 +118,7 @@
    </widget>
    <widget class="QTextEdit" name="wordinfoEdit">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -132,7 +138,7 @@
      <string/>
     </property>
     <property name="readOnly">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="placeholderText">
      <string/>

@@ -34,6 +34,7 @@ public:
     QPushButton *rememberButton;
     QPushButton *forgetButton;
     QPushButton *uploadButton;
+    QLabel *numLabel;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -60,12 +61,13 @@ public:
         restButton->setGeometry(QRect(600, 270, 75, 23));
         wordEdit = new QLineEdit(centralwidget);
         wordEdit->setObjectName(QStringLiteral("wordEdit"));
-        wordEdit->setEnabled(false);
+        wordEdit->setEnabled(true);
         wordEdit->setGeometry(QRect(210, 130, 321, 71));
         QFont font1;
-        font1.setFamily(QStringLiteral("Agency FB"));
-        font1.setPointSize(22);
+        font1.setFamily(QStringLiteral("Arial"));
+        font1.setPointSize(24);
         wordEdit->setFont(font1);
+        wordEdit->setReadOnly(true);
         rememberButton = new QPushButton(centralwidget);
         rememberButton->setObjectName(QStringLiteral("rememberButton"));
         rememberButton->setGeometry(QRect(250, 270, 75, 23));
@@ -76,6 +78,13 @@ public:
         uploadButton->setObjectName(QStringLiteral("uploadButton"));
         uploadButton->setEnabled(false);
         uploadButton->setGeometry(QRect(610, 40, 91, 41));
+        numLabel = new QLabel(centralwidget);
+        numLabel->setObjectName(QStringLiteral("numLabel"));
+        numLabel->setGeometry(QRect(70, 30, 91, 51));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Agency FB"));
+        font2.setPointSize(12);
+        numLabel->setFont(font2);
         RecitewordWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(RecitewordWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -98,6 +107,7 @@ public:
         rememberButton->setText(QApplication::translate("RecitewordWindow", "\346\210\221\350\256\260\345\276\227", 0));
         forgetButton->setText(QApplication::translate("RecitewordWindow", "\346\210\221\345\277\230\344\272\206", 0));
         uploadButton->setText(QApplication::translate("RecitewordWindow", "\344\270\212\344\274\240\350\203\214\345\215\225\350\257\215\346\225\260\346\215\256", 0));
+        numLabel->setText(QApplication::translate("RecitewordWindow", "TextLabel", 0));
     } // retranslateUi
 
 };
