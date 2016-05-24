@@ -37,11 +37,11 @@ bool ediccontroler::GetTestPaper(std::vector<mywordrecord> &testpaper)
         }
         num -= lasttime.size();
         if(User->getStralev() == 1){
-            num1 = (double)num * 0.7;
+            num1 = (double)num * 0.5;
             num2 = num - num1;
         }
         if(User->getStralev() == 2){
-            num1 = (double)num * 0.5;
+            num1 = (double)num * 0.3;
             num2 = num - num1;
         }
         //mylog.print(num);
