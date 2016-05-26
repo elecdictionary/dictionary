@@ -9,7 +9,6 @@ private:
     std::string username;
     char *date;
     std::vector<mywordrecord> allrecord;
-    //char* Path(const char* folder, char* name, const char* file);
 public:
     void TempRecord(std::vector<mywordrecord> record);
     int GetTemp(std::vector<mywordrecord> &record);
@@ -20,6 +19,9 @@ public:
     bool CheckWord(std::string word);
     void AddSentence(std::string sword, mysentences stc);
     void Sentence(std::vector<mysentences> &allst, std::string sword);
+    void DelSentence(int index, std::string sword);
+    void MakeHistory(std::string word);
+    void GetHistory(std::vector<std::string> &history);
     int WordRemembered();
     userlearn(std::string sname);
     ~userlearn();

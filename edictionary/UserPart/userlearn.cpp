@@ -3,20 +3,9 @@
 userlearn :: userlearn(std::string sname)
 {
     username = sname;
-
-    /*char *name;
-    name = Convert(sname);
-    //建立当天文件夹
-    char *commend;
-    commend = new char[100];*/
     date = new char[50];
     std::time_t t = time(0);
     strftime(date, 20, "%Y/%m/%d", localtime(&t));
-    /*strcpy(commend, "mkdir record\\");
-    strcat(commend, name);
-    strcat(commend, "\\");
-    strcat(commend, date);
-    system(commend);*/
 }
 
 void userlearn :: TempRecord(std::vector<mywordrecord> record)
@@ -54,7 +43,7 @@ int userlearn :: GetTemp(std::vector<mywordrecord> &record)
         record.push_back(*list);
         delete list;
     }
-    if (record.size() == 0)
+    if (record[record.size()-1].Record == 1)
         return 2;
     return 1;
 }
@@ -187,6 +176,71 @@ void userlearn :: Sentence(std::vector<mysentences> &allst, std::string sword)
         delete stc;
     }
     //mylog.print(allst);
+}
+
+void userlearn :: DelSentence(int index, std::string sword)
+{
+    char *filename, *name, *word;
+    word = Convert(sword);
+    name = Convert(username);
+    strcat(word, ".txt");
+    filename = Path("record", name, word);
+    std::vector<mysentences> allst;
+    std::ifstream fin(filename);
+    if (!fin) return;
+    mysentences *stc;
+    while (!fin.eof())
+    {
+        stc = new mysentences;
+        std::getline(fin, stc->English);
+        std::getline(fin, stc->Chinese);
+        allst.push_back(*stc);
+        delete stc;
+    }
+    fin.close();
+    std::ofstream fout(filename);
+    for (int i = 0; i < allst.size(); i++)
+        if (i != index)
+        {
+            fout << allst[i].English << std::endl;
+            fout << allst[i].Chinese << std::endl;
+        }
+    fout.close();
+}
+
+void userlearn :: MakeHistory(std::string word)
+{
+    char *filename, *name;
+    name = Convert(username);
+    filename = Path("record", name, "history.info");
+    std::ofstream fout(filename, std::ios::app);
+    fout << word << std::endl;
+    fout.close();
+}
+
+void GetHistory(std::vector<std::string> &history)
+{
+    char *filename, *name;
+    name = Convert(username);
+    filename = Path("record", name, "history.info");
+    std::ifstream fin(filename);
+    if (!fin)
+        return;
+    std::vector<std::string> list;
+    std::string word;
+    while(!fin.eof())
+    {
+        fin >> word;
+        for (int i = 0; i < list.size(); i++)
+            if (word.compare(list[i]) == 0)
+            {
+                std::vector<int>::iterator it = list.begin() + i;
+                list.erase(it);
+            }
+        list.push_back(word);
+    }
+    for (int i = list.size()-1; i >= list.size()-6; i--)
+        history.push_back(list[i]);
 }
 
 int userlearn :: WordRemembered()
