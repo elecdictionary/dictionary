@@ -200,7 +200,7 @@ void userlearn :: DelSentence(int index, std::string sword)
     fin.close();
     std::ofstream fout(filename);
     for (int i = 0; i < allst.size(); i++)
-        if (i != index)
+        if (i != index-1)
         {
             fout << allst[i].English << std::endl;
             fout << allst[i].Chinese << std::endl;
@@ -218,7 +218,7 @@ void userlearn :: MakeHistory(std::string word)
     fout.close();
 }
 
-void GetHistory(std::vector<std::string> &history)
+void userlearn :: GetHistory(std::vector<std::string> &history)
 {
     char *filename, *name;
     name = Convert(username);
@@ -239,7 +239,12 @@ void GetHistory(std::vector<std::string> &history)
             }
         list.push_back(word);
     }
-    for (int i = list.size()-1; i >= list.size()-6; i--)
+    int l, r;
+    r = list.size() - 1;
+    l = list.size() - 6;
+    if (l < 0)
+        l = 0;
+    for (int i = r; i >= l; i--)
         history.push_back(list[i]);
 }
 
